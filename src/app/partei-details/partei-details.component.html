@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h5 class="modal-title pull-left">{{ partei.nameLang }}</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()"><span aria-hidden="true">&times;</span></button>
+</div>
+
+<div class="modal-body">
+
+    <img class="img-thumbnail mr-3 float-left" style="width: 50px; height: 50px;" [src]="'assets/img/parteien/' + partei.logo">
+
+    <p>
+        {{ partei.beschreibung }}
+    </p>
+
+</div>

@@ -1,0 +1,55 @@
+
+<div class="py-3 py-md-5">
+
+    <div class="text-md-center text-muted mb-3">
+        Welche Thesen sollten Ihrer Meinung nach Teil des Magd-O-Mat werden? Beteiligen Sie sich an der Umfrage für die Einrichtung des Wahl-O-Maten für die Magdeburger Kommunalwahl 2019! <a href="#">Mehr darüber erfahren</a>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-6 mb-4">
+
+            <h4 class="mb-3">Ihre These</h4>
+
+            <form novalidate (ngSubmit)="these.trim() !== '' && theseAbschicken()">
+
+                <input class="form-control mb-3" placeholder="Name (optional)" name="name" [(ngModel)]="name">
+
+                <p class="text-muted small">Hinweis: Ihr Name wird in der Liste der eingesendeten Beiträge allen Besuchern dieser Seite angezeigt. Diese Angabe ist freiwillig.</p>
+
+                <textarea class="form-control mb-3" rows="5" name="these" [(ngModel)]="these"></textarea>
+
+                <select class="form-control mb-3" name="kategorie" [(ngModel)]="kategorie">
+                    <option>Ohne Kategorie</option>
+                    <option>Zusammenleben</option>
+                    <option>Natur und Umwelt</option>
+                    <option>Politik und Verwaltung</option>
+                    <option>Bildung, Kultur und Sport</option>
+                    <option>Wirtschaft und Energie</option>
+                    <option>Verkehr und Mobilität</option>
+                    <option>Stadtentwicklung</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary btn-block mb-3" [disabled]="isLoading || these.trim() === ''"><fa-icon *ngIf="isLoading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon> These abschicken</button>
+
+                <p class="text-muted small">Mit der Teilnahme an dieser Umfrage erklären Sie, dass Sie unsere <a [routerLink]="'/impressum'" target="_blank">Datenschutzbestimmungen</a> gelesen haben und damit einverstanden sind.</p>
+
+            </form>
+
+        </div>
+
+        <div class="col-md-6 mb-4">
+
+            <h4 class="mb-3">Eingesendete Beiträge</h4>
+
+            <ul class="list-group">
+                <li *ngFor="let these of thesen" class="list-group-item">
+                    <small class="float-right text-black-50">{{these.kategorie}}</small>
+                    <small>{{these.these}}</small>
+                    <footer class="blockquote-footer">{{these.name}} ({{these.datum | date: 'dd.MM.yyyy' }})</footer>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

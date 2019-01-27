@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+    height: 100%;
+}
+
+app-root {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2;
+}
+
+footer {
+    grid-row: 3;
+}

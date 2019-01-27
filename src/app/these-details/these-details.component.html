@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h5 class="modal-title pull-left">These {{ these.id + 1 }}/{{ anzahlThesen }}</h5>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()"><span aria-hidden="true">&times;</span></button>
+</div>
+
+<div class="modal-body pt-0">
+
+    <h5 class="m-3 m-md-5">{{ these.text }}</h5>
+
+    <div class="list-group list-group-flush">
+        <div *ngFor="let partei of parteien" class="list-group-item d-flex flex-row px-0">
+
+            <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/img/parteien/' + partei.logo">
+
+            <span class="flex-fill align-self-center ml-3 my-0">{{ partei.nameLang }}</span>
+
+            <fa-icon *ngIf="partei.thesen[these.id] === 'ja'" class="align-self-center text-success ml-3" [icon]="['far', 'smile']" size="2x"></fa-icon>
+            <fa-icon *ngIf="partei.thesen[these.id] === 'neutral'" class="align-self-center text-warning ml-3" [icon]="['far', 'meh']" size="2x"></fa-icon>
+            <fa-icon *ngIf="partei.thesen[these.id] === 'nein'" class="align-self-center text-danger ml-3" [icon]="['far', 'frown']" size="2x"></fa-icon>
+
+        </div>
+    </div>
+
+</div>
