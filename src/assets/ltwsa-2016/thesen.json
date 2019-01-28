@@ -2,305 +2,191 @@
     {
         "id": 0,
         "kategorie": "",
-        "text": "Das Land soll den flächendeckenden Ausbau des Mobilfunks finanziell unterstützen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Das Land soll den flächendeckenden Ausbau des Mobilfunks finanziell unterstützen."
     },
     {
         "id": 1,
         "kategorie": "",
-        "text": "Asylbewerberinnen und -bewerber sollen dezentral in Wohnungen untergebracht werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Asylbewerberinnen und -bewerber sollen dezentral in Wohnungen untergebracht werden."
     },
     {
         "id": 2,
         "kategorie": "",
-        "text": "In Sachsen-Anhalt soll weiterhin Braunkohle abgebaut werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "In Sachsen-Anhalt soll weiterhin Braunkohle abgebaut werden."
     },
     {
         "id": 3,
         "kategorie": "",
-        "text": "Das Land soll weiterhin Projekte gegen Rechtsextremismus fördern.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Das Land soll weiterhin Projekte gegen Rechtsextremismus fördern."
     },
     {
         "id": 4,
         "kategorie": "",
-        "text": "Der Anbau von gentechnisch veränderten Pflanzen soll in Sachsen-Anhalt verboten sein.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Der Anbau von gentechnisch veränderten Pflanzen soll in Sachsen-Anhalt verboten sein."
     },
     {
         "id": 5,
         "kategorie": "",
-        "text": "Alle Bachelorabsolventinnen und -absolventen in Sachsen-Anhalt sollen einen Rechtsanspruch auf einen Masterstudienplatz im Land erhalten.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Alle Bachelorabsolventinnen und -absolventen in Sachsen-Anhalt sollen einen Rechtsanspruch auf einen Masterstudienplatz im Land erhalten."
     },
     {
         "id": 6,
         "kategorie": "",
-        "text": "Die Videoüberwachung im öffentlichen Raum soll ausgeweitet werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Die Videoüberwachung im öffentlichen Raum soll ausgeweitet werden."
     },
     {
         "id": 7,
         "kategorie": "",
-        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass die Erbschaftssteuer erhöht wird.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass die Erbschaftssteuer erhöht wird."
     },
     {
         "id": 8,
         "kategorie": "",
-        "text": "Abgelehnte Asylbewerberinnen und -bewerber sollen weiterhin ohne Vorankündigung abgeschoben werden können.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Abgelehnte Asylbewerberinnen und -bewerber sollen weiterhin ohne Vorankündigung abgeschoben werden können."
     },
     {
         "id": 9,
         "kategorie": "",
-        "text": "Beim Wechsel auf die weiterführende Schule soll die Empfehlung der Grundschullehrerinnen und -lehrer wieder verbindlich sein.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Beim Wechsel auf die weiterführende Schule soll die Empfehlung der Grundschullehrerinnen und -lehrer wieder verbindlich sein."
     },
     {
         "id": 10,
         "kategorie": "",
-        "text": "Für ländliche Regionen sollen verstärkt Ärztinnen und Ärzte aus dem Ausland angeworben werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Für ländliche Regionen sollen verstärkt Ärztinnen und Ärzte aus dem Ausland angeworben werden."
     },
     {
         "id": 11,
         "kategorie": "",
-        "text": "Die Fünfprozenthürde bei Landtagswahlen soll beibehalten werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Die Fünfprozenthürde bei Landtagswahlen soll beibehalten werden."
     },
     {
         "id": 12,
         "kategorie": "",
-        "text": "Hartz-IV-Empfängerinnen und -Empfängern sollen weiterhin Leistungen gekürzt werden, wenn sie ein Job- Angebot ablehnen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Hartz-IV-Empfängerinnen und -Empfängern sollen weiterhin Leistungen gekürzt werden, wenn sie ein Job- Angebot ablehnen."
     },
     {
         "id": 13,
         "kategorie": "",
-        "text": "Güterzüge ohne “Flüsterbremsen” sollen nachts langsamer fahren müssen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Güterzüge ohne “Flüsterbremsen” sollen nachts langsamer fahren müssen."
     },
     {
         "id": 14,
         "kategorie": "",
-        "text": "Bei Großeinsätzen sollen alle Polizistinnen und Polizisten eine individuelle Kennung tragen müssen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Bei Großeinsätzen sollen alle Polizistinnen und Polizisten eine individuelle Kennung tragen müssen."
     },
     {
         "id": 15,
         "kategorie": "",
-        "text": "Das letzte Kindergartenjahr vor der Einschulung soll beitragsfrei sein.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Das letzte Kindergartenjahr vor der Einschulung soll beitragsfrei sein."
     },
     {
         "id": 16,
         "kategorie": "",
-        "text": "Saale und Elbe sollen durch einen Kanal für die Schifffahrt miteinander verbunden werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Saale und Elbe sollen durch einen Kanal für die Schifffahrt miteinander verbunden werden."
     },
     {
         "id": 17,
         "kategorie": "",
-        "text": "Wohngeld soll nur an Deutsche gezahlt werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Wohngeld soll nur an Deutsche gezahlt werden."
     },
     {
         "id": 18,
         "kategorie": "",
-        "text": "Im Profifußball sollen die Veranstalter an den Kosten für Polizeieinsätze bei Risikospielen beteiligt werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Im Profifußball sollen die Veranstalter an den Kosten für Polizeieinsätze bei Risikospielen beteiligt werden."
     },
     {
         "id": 19,
         "kategorie": "",
-        "text": "Langzeitstudierende sollen weiterhin Studiengebühren zahlen müssen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Langzeitstudierende sollen weiterhin Studiengebühren zahlen müssen."
     },
     {
         "id": 20,
         "kategorie": "",
-        "text": "In Sachsen-Anhalt sollen weitere Flächen für Windkraftanlagen ausgewiesen werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "In Sachsen-Anhalt sollen weitere Flächen für Windkraftanlagen ausgewiesen werden."
     },
     {
         "id": 21,
         "kategorie": "",
-        "text": "Bürgerwehren sollen die Polizei unterstützen dürfen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Bürgerwehren sollen die Polizei unterstützen dürfen."
     },
     {
         "id": 22,
         "kategorie": "",
-        "text": "Keine weiteren Privatisierungen von Krankenhäusern in Sachsen-Anhalt!",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Keine weiteren Privatisierungen von Krankenhäusern in Sachsen-Anhalt!"
     },
     {
         "id": 23,
         "kategorie": "",
-        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass homosexuelle Paare gemeinsam Kinder adoptieren dürfen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass homosexuelle Paare gemeinsam Kinder adoptieren dürfen."
     },
     {
         "id": 24,
         "kategorie": "",
-        "text": "Die Schuldenbremse soll in die Landesverfassung von Sachsen-Anhalt aufgenommen werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Die Schuldenbremse soll in die Landesverfassung von Sachsen-Anhalt aufgenommen werden."
     },
     {
         "id": 25,
         "kategorie": "",
-        "text": "In Sachsen-Anhalt sollen Förderschulen für Kinder und Jugendliche mit Behinderungen langfristig erhalten bleiben.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "In Sachsen-Anhalt sollen Förderschulen für Kinder und Jugendliche mit Behinderungen langfristig erhalten bleiben."
     },
     {
         "id": 26,
         "kategorie": "",
-        "text": "Der Verfassungsschutz des Landes Sachsen-Anhalt soll abgeschafft werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Der Verfassungsschutz des Landes Sachsen-Anhalt soll abgeschafft werden."
     },
     {
         "id": 27,
         "kategorie": "",
-        "text": "Einführung einer Impfpflicht für alle Kinder in Sachsen-Anhalt!",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Einführung einer Impfpflicht für alle Kinder in Sachsen-Anhalt!"
     },
     {
         "id": 28,
         "kategorie": "",
-        "text": "Konfessioneller Religionsunterricht soll weiterhin an allen Schulen Sachsen-Anhalts angeboten werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Konfessioneller Religionsunterricht soll weiterhin an allen Schulen Sachsen-Anhalts angeboten werden."
     },
     {
         "id": 29,
         "kategorie": "",
-        "text": "Alle dauerhaft in Sachsen-Anhalt lebenden Ausländerinnen und Ausländer sollen an Kommunalwahlen teilnehmen dürfen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Alle dauerhaft in Sachsen-Anhalt lebenden Ausländerinnen und Ausländer sollen an Kommunalwahlen teilnehmen dürfen."
     },
     {
         "id": 30,
         "kategorie": "",
-        "text": "Zur Aufarbeitung der SED-Diktatur sollen mehr Landesmittel zur Verfügung gestellt werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Zur Aufarbeitung der SED-Diktatur sollen mehr Landesmittel zur Verfügung gestellt werden."
     },
     {
         "id": 31,
         "kategorie": "",
-        "text": "Auch der Besitz von nur geringen Mengen Cannabis soll strafrechtlich verfolgt werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Auch der Besitz von nur geringen Mengen Cannabis soll strafrechtlich verfolgt werden."
     },
     {
         "id": 32,
         "kategorie": "",
-        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass die Wirtschaftssanktionen gegen Russland aufgehoben werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Sachsen-Anhalt soll sich dafür einsetzen, dass die Wirtschaftssanktionen gegen Russland aufgehoben werden."
     },
     {
         "id": 33,
         "kategorie": "",
-        "text": "Leiharbeiterinnen und -arbeiter sollen ab dem ersten Arbeitstag mindestens den gleichen Lohn erhalten wie regulär Beschäftigte.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Leiharbeiterinnen und -arbeiter sollen ab dem ersten Arbeitstag mindestens den gleichen Lohn erhalten wie regulär Beschäftigte."
     },
     {
         "id": 34,
         "kategorie": "",
-        "text": "Die Bundeswehr soll an den Schulen Sachsen-Anhalts für den Soldatenberuf werben dürfen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Die Bundeswehr soll an den Schulen Sachsen-Anhalts für den Soldatenberuf werben dürfen."
     },
     {
         "id": 35,
         "kategorie": "",
-        "text": "Flüchtlingen soll der Zugang zu medizinischer Versorgung erleichtert werden.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Flüchtlingen soll der Zugang zu medizinischer Versorgung erleichtert werden."
     },
     {
         "id": 36,
         "kategorie": "",
-        "text": "Das Land soll Auszubildende, die für ihre erste Berufsausbildung Geld bezahlen müssen, finanziell unterstützen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Das Land soll Auszubildende, die für ihre erste Berufsausbildung Geld bezahlen müssen, finanziell unterstützen."
     },
     {
         "id": 37,
         "kategorie": "",
-        "text": "Landwirtschaftliche Betriebe sollen zu Maßnahmen verpflichtet werden, die zum Schutz der Bienen beitragen.",
-        "doppeltGewertet": false,
-        "gewertet": false,
-        "wertung": "ohne"
+        "text": "Landwirtschaftliche Betriebe sollen zu Maßnahmen verpflichtet werden, die zum Schutz der Bienen beitragen."
     }
 ]

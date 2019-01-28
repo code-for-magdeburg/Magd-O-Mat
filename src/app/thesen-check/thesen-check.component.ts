@@ -107,8 +107,18 @@ export class ThesenCheckComponent implements OnInit {
             this.http
                 .get<any>(`assets/${this.wahl}/thesen.json`)
                 .subscribe(thesen => {
-                    this.thesen = thesen;
+
+                    this.thesen = _.map(thesen, these => ({
+                        id: these.id,
+                        kategorie: these.kategorie,
+                        text: these.text,
+                        doppeltGewertet: false,
+                        gewertet: false,
+                        wertung: 'ohne'
+                    }));
+
                     resolve();
+
                 }, err => reject(err));
 
         });
