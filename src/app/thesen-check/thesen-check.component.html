@@ -31,17 +31,17 @@
         <div *ngIf="aktuelleThese" class="row my-3">
 
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-success]="aktuelleThese.nichtGewertet || aktuelleThese.wertung !== 'ja'" [class.btn-success]="!aktuelleThese.nichtGewertet && aktuelleThese.wertung === 'ja'" (click)="stimmeJa()"><fa-icon [icon]="['far', 'smile']" size="2x"></fa-icon></button>
+                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-success]="!aktuelleThese.gewertet || aktuelleThese.wertung !== 'ja'" [class.btn-success]="aktuelleThese.gewertet && aktuelleThese.wertung === 'ja'" (click)="stimmeJa()"><fa-icon [icon]="['far', 'smile']" size="2x"></fa-icon></button>
                 <small class="d-block text-center">Stimme zu</small>
             </div>
 
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-warning]="aktuelleThese.nichtGewertet || aktuelleThese.wertung !== 'neutral'" [class.btn-warning]="!aktuelleThese.nichtGewertet && aktuelleThese.wertung === 'neutral'" (click)="stimmeEgal()"><fa-icon [icon]="['far', 'meh']" size="2x"></fa-icon></button>
+                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-warning]="!aktuelleThese.gewertet || aktuelleThese.wertung !== 'neutral'" [class.btn-warning]="aktuelleThese.gewertet && aktuelleThese.wertung === 'neutral'" (click)="stimmeEgal()"><fa-icon [icon]="['far', 'meh']" size="2x"></fa-icon></button>
                 <small class="d-block text-center">Neutral</small>
             </div>
 
             <div class="col">
-                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-danger]="aktuelleThese.nichtGewertet || aktuelleThese.wertung !== 'nein'" [class.btn-danger]="!aktuelleThese.nichtGewertet && aktuelleThese.wertung === 'nein'" (click)="stimmeNein()"><fa-icon [icon]="['far', 'frown']" size="2x"></fa-icon></button>
+                <button type="button" class="btn btn-lg btn-block" [class.btn-outline-danger]="!aktuelleThese.gewertet || aktuelleThese.wertung !== 'nein'" [class.btn-danger]="aktuelleThese.gewertet && aktuelleThese.wertung === 'nein'" (click)="stimmeNein()"><fa-icon [icon]="['far', 'frown']" size="2x"></fa-icon></button>
                 <small class="d-block text-center">Stimme nicht zu</small>
             </div>
 

@@ -47,28 +47,28 @@ export class ThesenCheckComponent implements OnInit {
 
     stimmeJa() {
         this.aktuelleThese.wertung = 'ja';
-        this.aktuelleThese.nichtGewertet = false;
+        this.aktuelleThese.gewertet = true;
         this.naechsteTheseOderAuswertung();
     }
 
 
     stimmeEgal() {
         this.aktuelleThese.wertung = 'neutral';
-        this.aktuelleThese.nichtGewertet = false;
+        this.aktuelleThese.gewertet = true;
         this.naechsteTheseOderAuswertung();
     }
 
 
     stimmeNein() {
         this.aktuelleThese.wertung = 'nein';
-        this.aktuelleThese.nichtGewertet = false;
+        this.aktuelleThese.gewertet = true;
         this.naechsteTheseOderAuswertung();
     }
 
 
     ueberspringen() {
         this.aktuelleThese.wertung = 'ohne';
-        this.aktuelleThese.nichtGewertet = true;
+        this.aktuelleThese.gewertet = false;
         this.naechsteTheseOderAuswertung();
     }
 
