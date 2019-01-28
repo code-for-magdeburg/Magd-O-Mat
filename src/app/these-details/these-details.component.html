@@ -10,7 +10,7 @@
     <div class="list-group list-group-flush">
         <div *ngFor="let partei of parteien" class="list-group-item d-flex flex-row px-0">
 
-            <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/img/parteien/' + partei.logo">
+            <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/' + wahl + '/img/' + partei.logo">
 
             <span class="flex-fill align-self-center ml-3 my-0">{{ partei.nameLang }}</span>
 

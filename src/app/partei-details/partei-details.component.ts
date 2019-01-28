@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -11,6 +12,7 @@ export class ParteiDetailsComponent {
 
 
     partei = null;
+    wahl = environment.wahl;
 
 
     constructor(public bsModalRef: BsModalRef) {

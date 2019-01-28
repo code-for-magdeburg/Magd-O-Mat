@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="row my-3">
+        <div *ngIf="aktuelleThese" class="row my-3">
 
             <div class="col">
                 <button type="button" class="btn btn-lg btn-block" [class.btn-outline-success]="aktuelleThese.nichtGewertet || aktuelleThese.wertung !== 'ja'" [class.btn-success]="!aktuelleThese.nichtGewertet && aktuelleThese.wertung === 'ja'" (click)="stimmeJa()"><fa-icon [icon]="['far', 'smile']" size="2x"></fa-icon></button>
@@ -62,7 +62,7 @@
 
         <div class="list-group list-group-flush d-none d-md-block">
             <div *ngFor="let ergebnisPartei of ergebnisseParteien" class="list-group-item list-group-item-action d-flex flex-row px-0" (click)="zeigePartei(ergebnisPartei.partei)">
-                <img class="img-thumbnail float-left" style="width: 100px; height: 100px;" [src]="'assets/img/parteien/' + ergebnisPartei.partei.logo">
+                <img class="img-thumbnail float-left" style="width: 100px; height: 100px;" [src]="'assets/' + wahl + '/img/' + ergebnisPartei.partei.logo">
                 <div class="container-fluid">
                     <h5 class="float-left mt-3">{{ ergebnisPartei.partei.nameLang }}</h5>
                     <h1 class="text-right">{{ ergebnisPartei.prozent | percent:'1.1-1':'de' }}</h1>
@@ -73,7 +73,7 @@
 
         <div class="list-group list-group-flush d-sm-block d-md-none">
             <div *ngFor="let ergebnisPartei of ergebnisseParteien" class="list-group-item list-group-item-action d-flex flex-row px-0" (click)="zeigePartei(ergebnisPartei.partei)">
-                <img class="img-thumbnail" style="width: 50px; height: 50px;" [src]="'assets/img/parteien/' + ergebnisPartei.partei.logo">
+                <img class="img-thumbnail" style="width: 50px; height: 50px;" [src]="'assets/' + wahl + '/img/' + ergebnisPartei.partei.logo">
                 <div class="container-fluid">
                     <h5 class="float-left">{{ ergebnisPartei.partei.nameKurz }}</h5>
                     <h5 class="text-right">{{ ergebnisPartei.prozent | percent:'1.1-1':'de' }}</h5>
@@ -97,7 +97,7 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-outline-primary btn-block" (click)="neustart()"><fa-icon [icon]="['fas', 'redo']"></fa-icon> Thesen-Check neu starten</button>
+        <button type="button" class="btn btn-outline-primary" (click)="neustart()"><fa-icon [icon]="['fas', 'redo']"></fa-icon> Thesen-Check neu starten</button>
 
     </div>
 
