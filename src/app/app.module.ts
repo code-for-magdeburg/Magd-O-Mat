@@ -18,6 +18,7 @@ import { ParteiDetailsComponent } from './partei-details/partei-details.componen
 import { TheseDetailsComponent } from './these-details/these-details.component';
 import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -28,6 +29,7 @@ library.add(fas, far);
 const ROUTES: Routes = [
     { path: '', redirectTo: '/teaser', pathMatch: 'full' },
     { path: 'teaser', component: TeaserComponent },
+    { path: 'ueber-uns', component: UeberUnsComponent },
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
     { path: 'umfrage', component: UmfrageComponent },
@@ -45,7 +47,8 @@ const ROUTES: Routes = [
         ParteiDetailsComponent,
         TheseDetailsComponent,
         HilfeComponent,
-        ImpressumComponent
+        ImpressumComponent,
+        UeberUnsComponent
     ],
     entryComponents: [
         ParteiDetailsComponent,
