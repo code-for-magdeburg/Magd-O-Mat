@@ -31,7 +31,8 @@ const ROUTES: Routes = [
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
     { path: 'umfrage', component: UmfrageComponent },
-    { path: 'thesen-check', component: ThesenCheckComponent }
+    { path: 'thesen-check', component: ThesenCheckComponent },
+    { path: '**', redirectTo: '/teaser', pathMatch: 'full' }
 ];
 
 
