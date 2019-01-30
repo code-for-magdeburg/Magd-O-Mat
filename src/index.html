@@ -2,6 +2,7 @@
 <html lang="de">
 
 <head>
+
     <meta charset="utf-8">
     <title>Magd-O-Mat</title>
     <base href="/">
@@ -16,6 +17,22 @@
     <meta property="og:title" content="Magd-O-Mat"/>
     <meta property="og:description" content="Kommunalwahl in Magdeburg am 26. Mai 2019"/>
     <meta property="og:image" content="https://www.magdeburg-waehlt.de/img/Otto_waehlt_Banner_klein1.jpg"/>
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="https://magdeburgwaehlt.matomo.cloud/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src='//cdn.matomo.cloud/magdeburgwaehlt.matomo.cloud/piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
 
 </head>
 
