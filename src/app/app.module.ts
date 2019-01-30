@@ -19,6 +19,7 @@ import { TheseDetailsComponent } from './these-details/these-details.component';
 import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
+import { LTWSA2016Component } from './ltwsa2016/ltwsa2016.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -34,6 +35,7 @@ const ROUTES: Routes = [
     { path: 'impressum', component: ImpressumComponent },
     { path: 'umfrage', component: UmfrageComponent },
     { path: 'thesen-check', component: ThesenCheckComponent },
+    { path: 'ltwsa-2016', component: LTWSA2016Component },
     { path: '**', redirectTo: '/teaser', pathMatch: 'full' }
 ];
 
@@ -48,7 +50,8 @@ const ROUTES: Routes = [
         TheseDetailsComponent,
         HilfeComponent,
         ImpressumComponent,
-        UeberUnsComponent
+        UeberUnsComponent,
+        LTWSA2016Component
     ],
     entryComponents: [
         ParteiDetailsComponent,
