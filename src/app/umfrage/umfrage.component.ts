@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class UmfrageComponent implements OnInit {
     isLoading = false;
 
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private toastr: ToastrService) {
     }
 
 
@@ -42,17 +43,17 @@ export class UmfrageComponent implements OnInit {
             .post('https://magdomat-functions.azurewebsites.net/api/AddEntry', payload)
             .subscribe(() => {
 
-                // TODO: Handle success
-
                 this.ladeThesen();
                 this.kategorie = 'Ohne Kategorie';
                 this.these = '';
 
                 this.isLoading = false;
 
+                this.toastr.success('Ihre These ist bei uns eingegangen.', 'Vielen Dank!');
+
             }, err => {
-                // TODO: Handle error
                 this.isLoading = false;
+                this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }
@@ -92,9 +93,7 @@ export class UmfrageComponent implements OnInit {
 
                 }).sort(compare);
 
-            }, err => {
-                // TODO: Handle error
-            });
+            }, () => this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler'));
 
     }
 

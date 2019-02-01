@@ -20,6 +20,8 @@ import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
 import { LTWSA2016Component } from './ltwsa2016/ltwsa2016.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 registerLocaleData(localeDe, 'de');
@@ -59,6 +61,7 @@ const ROUTES: Routes = [
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         ButtonsModule.forRoot(),
         FontAwesomeModule,
         FormsModule,
@@ -66,7 +69,8 @@ const ROUTES: Routes = [
         ModalModule.forRoot(),
         PaginationModule.forRoot(),
         ProgressbarModule.forRoot(),
-        RouterModule.forRoot(ROUTES)
+        RouterModule.forRoot(ROUTES),
+        ToastrModule.forRoot()
     ],
     providers: [
         { provide: LOCALE_ID, useValue: 'de' }
