@@ -15,7 +15,7 @@ export class UmfrageComponent implements OnInit {
     kategorie = 'Ohne Kategorie';
     these = '';
 
-    thesen = [];
+    thesen = null;
 
     isLoading = false;
     isLoadingEntries = false;

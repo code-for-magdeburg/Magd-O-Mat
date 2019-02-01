@@ -44,7 +44,11 @@
 
             <fa-icon *ngIf="isLoadingEntries" class="d-block text-center" [icon]="['fas', 'spinner']" [spin]="true" size="2x"></fa-icon>
 
-            <ul *ngIf="!isLoadingEntries" class="list-group">
+            <div *ngIf="!isLoadingEntries && thesen?.length === 0" class="text-muted">
+                Bisher keine Thesen eingesendet
+            </div>
+
+            <ul *ngIf="!isLoadingEntries && thesen?.length > 0" class="list-group">
                 <li *ngFor="let these of thesen" class="list-group-item">
                     <small class="float-right text-black-50">{{these.kategorie}}</small>
                     <small>{{these.these}}</small>
