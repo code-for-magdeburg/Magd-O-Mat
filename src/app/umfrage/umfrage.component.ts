@@ -18,6 +18,7 @@ export class UmfrageComponent implements OnInit {
     thesen = [];
 
     isLoading = false;
+    isLoadingEntries = false;
 
 
     constructor(private http: HttpClient, private toastr: ToastrService) {
@@ -75,6 +76,8 @@ export class UmfrageComponent implements OnInit {
 
         };
 
+        this.isLoadingEntries = true;
+
         this.http
             .get('https://magdomat-functions.azurewebsites.net/api/GetEntries')
             .subscribe((entries: any[]) => {
@@ -93,7 +96,12 @@ export class UmfrageComponent implements OnInit {
 
                 }).sort(compare);
 
-            }, () => this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler'));
+                this.isLoadingEntries = false;
+
+            }, () => {
+                this.isLoadingEntries = false;
+                this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
+            });
 
     }
 

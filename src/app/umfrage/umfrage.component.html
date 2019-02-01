@@ -42,7 +42,9 @@
 
             <h4 class="mb-3">Eingesendete Beiträge</h4>
 
-            <ul class="list-group">
+            <fa-icon *ngIf="isLoadingEntries" class="d-block text-center" [icon]="['fas', 'spinner']" [spin]="true" size="2x"></fa-icon>
+
+            <ul *ngIf="!isLoadingEntries" class="list-group">
                 <li *ngFor="let these of thesen" class="list-group-item">
                     <small class="float-right text-black-50">{{these.kategorie}}</small>
                     <small>{{these.these}}</small>
