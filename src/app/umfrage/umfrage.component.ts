@@ -82,19 +82,24 @@ export class UmfrageComponent implements OnInit {
             .get('https://magdomat-functions.azurewebsites.net/api/GetEntries')
             .subscribe((entries: any[]) => {
 
-                this.thesen = entries.map(entry => {
+                this.thesen = entries
+                    .map((entry, index) => {
 
-                    const name = entry.Name ? entry.Name._.trim() : '';
-                    const kategorie = entry.Kategorie ? entry.Kategorie._.trim() : 'Ohne Kategorie';
+                        const name = entry.Name ? entry.Name._.trim() : '';
+                        const kategorie = entry.Kategorie ? entry.Kategorie._.trim() : 'Ohne Kategorie';
 
-                    return {
-                        datum: entry.Timestamp._,
-                        name: name === '' ? 'Anonym' : name,
-                        kategorie,
-                        these: entry.These._.trim()
-                    };
+                        return {
+                            nr: index + 1,
+                            datum: entry.Timestamp._,
+                            name: name === '' ? 'Anonym' : name,
+                            kategorie,
+                            these: entry.These._.trim(),
+                            geloescht: entry.Geloescht._
+                        };
 
-                }).sort(compare);
+                    })
+                    .filter(entry => !entry.geloescht)
+                    .sort(compare);
 
                 this.isLoadingEntries = false;
 

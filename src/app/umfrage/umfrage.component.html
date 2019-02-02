@@ -9,7 +9,7 @@
 
         <div class="col-md-6 mb-4">
 
-            <h4 class="mb-3">Ihre These</h4>
+            <h4 class="mb-3">Ihre Wunsch-These</h4>
 
             <form novalidate (ngSubmit)="these.trim() !== '' && theseAbschicken()">
 
@@ -51,7 +51,7 @@
             <ul *ngIf="!isLoadingEntries && thesen?.length > 0" class="list-group">
                 <li *ngFor="let these of thesen" class="list-group-item">
                     <small class="float-right text-black-50">{{these.kategorie}}</small>
-                    <small>{{these.these}}</small>
+                    <small>#{{these.nr}} - {{these.these}}</small>
                     <footer class="blockquote-footer">{{these.name}} ({{these.datum | date: 'dd.MM.yyyy' }})</footer>
                 </li>
             </ul>
