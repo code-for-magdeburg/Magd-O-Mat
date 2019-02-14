@@ -1,8 +1,8 @@
 
 <div class="py-3 py-md-5">
 
-    <h4 class="d-sm-none text-primary">Welches Thema ist Ihnen wichtig?</h4>
-    <h4 class="text-center d-sm-block d-none text-primary">Welches Thema ist Ihnen wichtig?</h4>
+    <h4 class="d-sm-none">Welches Thema ist Ihnen wichtig?</h4>
+    <h4 class="text-center d-sm-block d-none">Welches Thema ist Ihnen wichtig?</h4>
     <div class="text-md-center text-muted mb-5">
         <fa-icon [icon]="['fas', 'heart']" size="8x" class="d-sm-none" style="position: absolute; opacity: 0.1; width: 85%; text-align: center;"></fa-icon>
         Wir suchen Thesen für den Kommunalwahl-Check. Bitte beteiligen Sie sich an unserer Umfrage und formulieren Sie in jeweils einem Satz, wofür sich unsere zukünftigen Kommunalpolitiker einsetzen sollten.
@@ -12,7 +12,7 @@
 
         <div class="col-md-6 mb-4">
 
-            <h4 class="mb-3 text-primary">Ihre Wunsch-These</h4>
+            <h4 class="mb-3">Ihre Wunsch-These</h4>
 
             <form novalidate (ngSubmit)="these.trim() !== '' && theseAbschicken()">
 
@@ -43,7 +43,7 @@
 
         <div class="col-md-6 mb-4">
 
-            <h4 class="mb-3 text-primary">Eingesendete Beiträge</h4>
+            <h4 class="mb-3">Eingesendete Beiträge</h4>
 
             <fa-icon *ngIf="isLoadingEntries" class="d-block text-center" [icon]="['fas', 'spinner']" [spin]="true" size="2x"></fa-icon>
 
