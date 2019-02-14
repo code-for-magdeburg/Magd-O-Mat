@@ -64,11 +64,11 @@ export class UmfrageComponent implements OnInit {
 
         const compare = (a, b) => {
 
-            if (a.datum < b.datum) {
+            if (a.nr < b.nr) {
                 return 1;
             }
 
-            if (a.datum > b.datum) {
+            if (a.nr > b.nr) {
                 return -1;
             }
 
