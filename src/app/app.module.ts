@@ -30,8 +30,8 @@ library.add(fas, far);
 
 
 const ROUTES: Routes = [
-    { path: '', redirectTo: '/teaser', pathMatch: 'full' },
-    { path: 'teaser', component: TeaserComponent },
+    { path: '', component: UmfrageComponent },
+    //{ path: 'teaser', component: TeaserComponent },
     { path: 'ueber-uns', component: UeberUnsComponent },
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
