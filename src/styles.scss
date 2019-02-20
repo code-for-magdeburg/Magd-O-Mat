@@ -8,6 +8,21 @@
 @import '~ngx-toastr/toastr-bs4-alert';
 
 
+/* permanent-marker-regular - latin */
+@font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/permanent-marker-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'),
+    url('assets/fonts/permanent-marker-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('assets/fonts/permanent-marker-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('assets/fonts/permanent-marker-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('assets/fonts/permanent-marker-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('assets/fonts/permanent-marker-v7-latin-regular.svg#PermanentMarker') format('svg'); /* Legacy iOS */
+}
+
+
 html {
     height: 100%;
 }
@@ -16,6 +31,10 @@ app-root {
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+    font-family: 'Permanent Marker';
 }
 
 header {
