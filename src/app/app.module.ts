@@ -40,7 +40,7 @@ const ROUTES: Routes = [
     { path: 'thesen', component: ThesenComponent },
     { path: 'thesen-check', component: ThesenCheckComponent },
     { path: 'ltwsa-2016', component: LTWSA2016Component },
-    { path: '**', redirectTo: '/teaser', pathMatch: 'full' }
+    { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 
