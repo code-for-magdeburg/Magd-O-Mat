@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    wahl: 'ltwsa-2016'
+    wahl: '2019-kwmd'
 };
