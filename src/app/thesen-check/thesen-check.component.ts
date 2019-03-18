@@ -110,7 +110,6 @@ export class ThesenCheckComponent implements OnInit {
 
                     this.thesen = _.map(thesen, these => ({
                         id: these.id,
-                        kategorie: these.kategorie,
                         text: these.text,
                         doppeltGewertet: false,
                         gewertet: false,

@@ -20,8 +20,7 @@
                 </div>
                 <button type="button" class="card-link btn btn-link btn-sm p-0 d-md-none mb-3" [disabled]="aktuelleTheseIndex <= 0" (click)="zurueck()"><fa-icon [icon]="['fas', 'arrow-left']"></fa-icon> Zurück</button>
                 <button type="button" class="card-link btn btn-link btn-sm p-0 float-right" (click)="ueberspringen()">These überspringen</button>
-                <h5 class="card-title">{{ aktuelleThese.kategorie }}</h5>
-                <h6 class="card-subtitle mb-3 text-muted">These {{ aktuelleTheseIndex+1 }}/{{ thesen.length }}</h6>
+                <h6 class="card-title mb-3 text-muted">These {{ aktuelleTheseIndex+1 }}/{{ thesen.length }}</h6>
                 <h5 class="card-text m-3 m-md-5">{{ aktuelleThese.text }}</h5>
                 <button type="button" class="btn btn-sm" [class.btn-light]="!aktuelleThese.doppeltGewertet" [class.btn-dark]="aktuelleThese.doppeltGewertet" [(ngModel)]="aktuelleThese.doppeltGewertet" btnCheckbox><fa-icon [icon]="[aktuelleThese.doppeltGewertet ? 'fas' : 'far', 'heart']"></fa-icon> {{ aktuelleThese.doppeltGewertet ? 'Doppelt gewertet' : 'Doppelt werten' }}</button>
             </div>
