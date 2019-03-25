@@ -23,6 +23,8 @@ import { LTWSA2016Component } from './ltwsa2016/ltwsa2016.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThesenComponent } from './thesen/thesen.component';
+import { PositionenComponent } from './positionen/positionen.component';
+import { SicherheitscodeModalComponent } from './positionen/sicherheitscode-modal/sicherheitscode-modal.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -39,6 +41,7 @@ const ROUTES: Routes = [
     { path: 'umfrage', component: UmfrageComponent },
     { path: 'thesen', component: ThesenComponent },
     { path: 'thesen-check', component: ThesenCheckComponent },
+    { path: 'positionen', component: PositionenComponent },
     { path: 'ltwsa-2016', component: LTWSA2016Component },
     { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
@@ -56,10 +59,13 @@ const ROUTES: Routes = [
         ImpressumComponent,
         UeberUnsComponent,
         LTWSA2016Component,
-        ThesenComponent
+        ThesenComponent,
+        PositionenComponent,
+        SicherheitscodeModalComponent
     ],
     entryComponents: [
         ParteiDetailsComponent,
+        SicherheitscodeModalComponent,
         TheseDetailsComponent
     ],
     imports: [

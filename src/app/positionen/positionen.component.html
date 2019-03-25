@@ -1,0 +1,43 @@
+<div class="py-3 py-md-5">
+
+<!--
+    <div class="text-md-center text-muted mb-3">
+        <p>Der Magd-O-Mat ist keine Wahlempfehlung, sondern ein Informationsangebot. Erfahren Sie mehr auf der <a [routerLink]="'/hilfe'">Hilfeseite</a>.</p>
+    </div>
+-->
+
+    <div *ngIf="partei" class="card mb-5 shadow">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-3 text-muted">Kurzbeschreibung Ihrer Partei/Wählergruppe</h6>
+            <textarea class="form-control mb-3" rows="5" [(ngModel)]="beschreibung"></textarea>
+            <button class="btn btn-secondary" [disabled]="isLoadingPartei" (click)="beschreibungSpeichern()"><fa-icon *ngIf="isLoadingPartei" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon> Speichern</button>
+            <small class="text-muted float-right">noch {{500-beschreibung.length}} Zeichen</small>
+        </div>
+    </div>
+
+    <fa-icon *ngIf="isLoadingPositionen" class="d-block text-center" [icon]="['fas', 'spinner']" [spin]="true" size="2x"></fa-icon>
+
+    <div *ngFor="let position of positionen; let theseIndex = index" class="card mb-5 shadow">
+        <div class="card-body">
+
+            <!--<h5 class="card-title">{{ position.kategorie }}</h5>-->
+            <h6 class="card-subtitle mb-3 text-muted">These {{ theseIndex+1 }}/{{ positionen.length }}</h6>
+            <h5 class="card-text m-3 m-md-5">{{ position.these }}</h5>
+
+            <div class="row my-3">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-block mb-sm-0 mb-3" [class.btn-outline-success]="position.wertung !== 'ja'" [class.btn-success]="position.wertung === 'ja'" (click)="positionJa(position)"><fa-icon [icon]="['far', 'smile']"></fa-icon><br class="d-md-none"> Zustimmung</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-block mb-sm-0 mb-3" [class.btn-outline-warning]="position.wertung !== 'neutral'" [class.btn-warning]="position.wertung === 'neutral'" (click)="positionNeutral(position)"><fa-icon [icon]="['far', 'meh']"></fa-icon><br class="d-md-none"> Neutral</button>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-block" [class.btn-outline-danger]="position.wertung !== 'nein'" [class.btn-danger]="position.wertung === 'nein'" (click)="positionNein(position)"><fa-icon [icon]="['far', 'frown']"></fa-icon><br class="d-md-none"> Ablehnung</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
