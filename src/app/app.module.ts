@@ -6,7 +6,7 @@ import { ButtonsModule, ModalModule, PaginationModule, ProgressbarModule } from 
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { UmfrageComponent } from './umfrage/umfrage.component';
-import { TeaserComponent } from './teaser/teaser.component';
+import { StartComponent } from './start/start.component';
 import { ThesenCheckComponent } from './thesen-check/thesen-check.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -31,8 +31,8 @@ library.add(fas, far);
 
 
 const ROUTES: Routes = [
-    { path: '', component: TeaserComponent },
-    { path: 'teaser', component: TeaserComponent },
+    { path: '', component: StartComponent },
+    { path: 'start', component: StartComponent },
     { path: 'ueber-uns', component: UeberUnsComponent },
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
@@ -48,7 +48,7 @@ const ROUTES: Routes = [
     declarations: [
         AppComponent,
         UmfrageComponent,
-        TeaserComponent,
+        StartComponent,
         ThesenCheckComponent,
         ParteiDetailsComponent,
         TheseDetailsComponent,
