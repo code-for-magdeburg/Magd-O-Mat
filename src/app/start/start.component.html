@@ -1,10 +1,26 @@
 
-<div class="text-center py-5">
+<div class="text-center py-5x">
 
-    <div *ngIf="showTeaser" class="card shadow mx-5">
+    <div *ngIf="showTeaser" class="card shadow mx-1 my-5">
         <div class="card-body">
-            <h2 class="text-black-50">Hier entsteht in Kürze der Wahl-O-Mat für die Kommunalwahl von Magdeburg 2019.</h2>
+            <h2 class="text-black-50">Hier startet in Kürze der Wahl-O-Mat für die Kommunalwahl von Magdeburg 2019.</h2>
         </div>
     </div>
+
+    <div *ngIf="!showTeaser" class="text-left mx-1 mt-3">
+        <h5 class="text-center mb-3">Willkommen beim MAGD-O-MAT, dem Thesen-Check zur Magdeburger Kommunalwahl 2019!</h5>
+        <ol class="pl-3 mt-1">
+            <li>Lies Dir die folgenden Thesen durch und entscheide, ob Du zustimmst, neutral bist, oder nicht zustimmst.</li>
+            <li>Schau Dir an, wie die Positionen der Parteien und Wählergemeinschaften zu den Thesen sind.</li>
+            <li>Schau Dir die Wahlprogramme an oder sprich die Kandidierenden direkt an, um sie besser kennen zu lernen.</li>
+            <li>Geh am 26. Mai wählen! Du kannst auch per Brief abstimmen. Check Deine Wahlbenachrichtung für weitere Informationen.</li>
+        </ol>
+    </div>
+
+    <!--<p>Mehr Informationen findest du im <a [routerLink]="'/hilfe'">Projekt-Tagebuch</a> und auf der <a [routerLink]="'/hilfe'">Hilfeseite</a>.</p>-->
+
+    <p>Mehr Informationen findest du auf der <a [routerLink]="'/hilfe'">Hilfeseite</a>.</p>
+
+    <a *ngIf="!showTeaser" [routerLink]="'/thesen-check'" class="btn btn-primary btn-block btn-lg mt-3"><fa-icon [icon]="['fas', 'hand-point-right']" class="mr-3"></fa-icon>Thesen-Check starten<fa-icon [icon]="['fas', 'hand-point-left']" class="ml-3"></fa-icon></a>
 
 </div>
