@@ -23,6 +23,7 @@ import { LTWSA2016Component } from './ltwsa2016/ltwsa2016.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThesenComponent } from './thesen/thesen.component';
+import { TagebuchComponent } from './tagebuch/tagebuch.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -34,6 +35,7 @@ const ROUTES: Routes = [
     { path: '', component: StartComponent },
     { path: 'start', component: StartComponent },
     { path: 'ueber-uns', component: UeberUnsComponent },
+    { path: 'tagebuch', component: TagebuchComponent },
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
     { path: 'umfrage', component: UmfrageComponent },
@@ -56,7 +58,8 @@ const ROUTES: Routes = [
         ImpressumComponent,
         UeberUnsComponent,
         LTWSA2016Component,
-        ThesenComponent
+        ThesenComponent,
+        TagebuchComponent
     ],
     entryComponents: [
         ParteiDetailsComponent,
