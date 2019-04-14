@@ -9,4 +9,6 @@
 
     <p>"{{ partei.beschreibung }}"</p>
 
+    <span *ngIf="partei && partei.internetadresse">Mehr Informationen unter: <a [href]="partei.internetadresse.startsWith('http://') || partei.internetadresse.startsWith('https://') ? partei.internetadresse : 'http://' + partei.internetadresse" target="_blank">{{ partei.internetadresse }}</a></span>
+
 </div>
