@@ -91,7 +91,7 @@ export class ThesenCheckComponent implements OnInit {
 
 
     zeigePartei(partei: any) {
-        this.modalRef = this.modalService.show(ParteiDetailsComponent, { initialState: { partei }});
+        this.modalRef = this.modalService.show(ParteiDetailsComponent, { initialState: { partei, thesen: this.thesen }});
     }
 
 

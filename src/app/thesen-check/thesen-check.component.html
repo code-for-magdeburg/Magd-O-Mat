@@ -84,7 +84,7 @@
             <div *ngFor="let these of thesen; let index = index" class="list-group-item list-group-item-action d-flex" (click)="zeigeThese(these)">
 
                 <div class="flex-fill">
-                    <strong>These {{ index+1 }}/{{ thesen.length }} <fa-icon *ngIf="these.doppeltGewertet" [icon]="['fas', 'heart']"></fa-icon></strong><br>
+                    <strong>These {{ index+1 }}/{{ thesen.length }} <fa-icon *ngIf="these.doppeltGewertet && these.wertung !== 'ohne'" [icon]="['fas', 'heart']"></fa-icon></strong><br>
                     {{ these.text }}
                 </div>
 
