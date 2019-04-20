@@ -70,7 +70,7 @@ export class ThesenComponent implements OnInit {
 
             }, () => {
                 this.isLoadingEntries = false;
-                this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
+                this.toastr.error('Bitte versuche es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }

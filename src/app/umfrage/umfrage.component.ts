@@ -50,11 +50,11 @@ export class UmfrageComponent implements OnInit {
 
                 this.isLoading = false;
 
-                this.toastr.success('Ihre These ist bei uns eingegangen.', 'Vielen Dank!');
+                this.toastr.success('Deine These ist bei uns eingegangen.', 'Vielen Dank!');
 
             }, err => {
                 this.isLoading = false;
-                this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
+                this.toastr.error('Bitte versuche es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }
@@ -105,7 +105,7 @@ export class UmfrageComponent implements OnInit {
 
             }, () => {
                 this.isLoadingEntries = false;
-                this.toastr.error('Bitte versuchen Sie es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
+                this.toastr.error('Bitte versuche es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }
