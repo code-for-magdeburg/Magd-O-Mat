@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class StartComponent {
 
 
-    showTeaser = true;
+    showTeaser = false;
 
 
 }
