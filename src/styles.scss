@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~ngx-toastr/toastr';
+@import '~ngx-toastr/toastr-bs4-alert';
+
+
+/* permanent-marker-regular - latin */
+@font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/permanent-marker-v7-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'),
+    url('assets/fonts/permanent-marker-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('assets/fonts/permanent-marker-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('assets/fonts/permanent-marker-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('assets/fonts/permanent-marker-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('assets/fonts/permanent-marker-v7-latin-regular.svg#PermanentMarker') format('svg'); /* Legacy iOS */
+}
+
+
+html {
+    height: 100%;
+}
+
+app-root {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1 {
+    _font-family: 'Permanent Marker';
+}
+
+header {
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2;
+}
+
+footer {
+    grid-row: 3;
+}
+
+/* TOASTR BUGFIX */
+#toast-container > div {
+    opacity: 1;
+}
+.toast {
+    font-size: initial !important;
+    border: initial !important;
+    backdrop-filter: blur(0) !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cpath fill='rgb(255,255,255)' d='M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z'/%3E%3C/svg%3E");
+}
+.toast-success {
+    background-color: #51A351 !important;
+}
+.toast-error {
+    background-color: #BD362F !important;
+}
+.toast-info {
+    background-color: #2F96B4 !important;
+}
+.toast-warning {
+    background-color: #F89406 !important;
+}

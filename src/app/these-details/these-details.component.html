@@ -5,12 +5,19 @@
 
 <div class="modal-body pt-0">
 
-    <h5 class="m-3 m-md-5">{{ these.text }}</h5>
+    <h5 class="m-3 m-md-5 text-center">{{ these.text }}</h5>
 
-    <div class="list-group list-group-flush">
+    <span class="text-muted small ml-3">Deine Wertung:</span>
+    <fa-icon *ngIf="these.wertung === 'ja'" class="text-success ml-2" [icon]="['far', 'smile']"></fa-icon>
+    <fa-icon *ngIf="these.wertung === 'neutral'" class="text-warning ml-2" [icon]="['far', 'meh']"></fa-icon>
+    <fa-icon *ngIf="these.wertung === 'nein'" class="text-danger ml-2" [icon]="['far', 'frown']"></fa-icon>
+    <span *ngIf="these.wertung === 'ohne'" class="text-muted ml-2">-</span>
+    <fa-icon *ngIf="these.doppeltGewertet && these.wertung !== 'ohne'" class="text-muted ml-2" [icon]="['fas', 'heart']"></fa-icon>
+
+    <div class="list-group list-group-flush mt-3">
         <div *ngFor="let partei of parteien" class="list-group-item d-flex flex-row px-0">
 
-            <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/img/parteien/' + partei.logo">
+            <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/' + wahl + '/img/' + partei.logo">
 
             <span class="flex-fill align-self-center ml-3 my-0">{{ partei.nameLang }}</span>
 

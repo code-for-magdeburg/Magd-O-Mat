@@ -6,7 +6,7 @@ import { ButtonsModule, ModalModule, PaginationModule, ProgressbarModule } from 
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { UmfrageComponent } from './umfrage/umfrage.component';
-import { TeaserComponent } from './teaser/teaser.component';
+import { StartComponent } from './start/start.component';
 import { ThesenCheckComponent } from './thesen-check/thesen-check.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -18,6 +18,12 @@ import { ParteiDetailsComponent } from './partei-details/partei-details.componen
 import { TheseDetailsComponent } from './these-details/these-details.component';
 import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
+import { LTWSA2016Component } from './ltwsa2016/ltwsa2016.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThesenComponent } from './thesen/thesen.component';
+import { TagebuchComponent } from './tagebuch/tagebuch.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -26,12 +32,17 @@ library.add(fas, far);
 
 
 const ROUTES: Routes = [
-    { path: '', redirectTo: '/teaser', pathMatch: 'full' },
-    { path: 'teaser', component: TeaserComponent },
+    { path: '', component: StartComponent },
+    { path: 'start', component: StartComponent },
+    { path: 'ueber-uns', component: UeberUnsComponent },
+    { path: 'tagebuch', component: TagebuchComponent },
     { path: 'hilfe', component: HilfeComponent },
     { path: 'impressum', component: ImpressumComponent },
     { path: 'umfrage', component: UmfrageComponent },
-    { path: 'thesen-check', component: ThesenCheckComponent }
+    { path: 'thesen', component: ThesenComponent },
+    { path: 'thesen-check', component: ThesenCheckComponent },
+    { path: 'ltwsa-2016', component: LTWSA2016Component },
+    { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 
@@ -39,12 +50,16 @@ const ROUTES: Routes = [
     declarations: [
         AppComponent,
         UmfrageComponent,
-        TeaserComponent,
+        StartComponent,
         ThesenCheckComponent,
         ParteiDetailsComponent,
         TheseDetailsComponent,
         HilfeComponent,
-        ImpressumComponent
+        ImpressumComponent,
+        UeberUnsComponent,
+        LTWSA2016Component,
+        ThesenComponent,
+        TagebuchComponent
     ],
     entryComponents: [
         ParteiDetailsComponent,
@@ -52,6 +67,7 @@ const ROUTES: Routes = [
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         ButtonsModule.forRoot(),
         FontAwesomeModule,
         FormsModule,
@@ -59,7 +75,8 @@ const ROUTES: Routes = [
         ModalModule.forRoot(),
         PaginationModule.forRoot(),
         ProgressbarModule.forRoot(),
-        RouterModule.forRoot(ROUTES)
+        RouterModule.forRoot(ROUTES),
+        ToastrModule.forRoot()
     ],
     providers: [
         { provide: LOCALE_ID, useValue: 'de' }

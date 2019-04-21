@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -14,12 +15,13 @@ export class UmfrageComponent implements OnInit {
     kategorie = 'Ohne Kategorie';
     these = '';
 
-    thesen = [];
+    thesen = null;
 
     isLoading = false;
+    isLoadingEntries = false;
 
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private toastr: ToastrService) {
     }
 
 
@@ -42,17 +44,17 @@ export class UmfrageComponent implements OnInit {
             .post('https://magdomat-functions.azurewebsites.net/api/AddEntry', payload)
             .subscribe(() => {
 
-                // TODO: Handle success
-
                 this.ladeThesen();
                 this.kategorie = 'Ohne Kategorie';
                 this.these = '';
 
                 this.isLoading = false;
 
+                this.toastr.success('Deine These ist bei uns eingegangen.', 'Vielen Dank!');
+
             }, err => {
-                // TODO: Handle error
                 this.isLoading = false;
+                this.toastr.error('Bitte versuche es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }
@@ -62,11 +64,11 @@ export class UmfrageComponent implements OnInit {
 
         const compare = (a, b) => {
 
-            if (a.datum < b.datum) {
+            if (a.nr < b.nr) {
                 return 1;
             }
 
-            if (a.datum > b.datum) {
+            if (a.nr > b.nr) {
                 return -1;
             }
 
@@ -74,26 +76,36 @@ export class UmfrageComponent implements OnInit {
 
         };
 
+        this.isLoadingEntries = true;
+
         this.http
             .get('https://magdomat-functions.azurewebsites.net/api/GetEntries')
             .subscribe((entries: any[]) => {
 
-                this.thesen = entries.map(entry => {
+                this.thesen = entries
+                    .map((entry, index) => {
 
-                    const name = entry.Name ? entry.Name._.trim() : '';
-                    const kategorie = entry.Kategorie ? entry.Kategorie._.trim() : 'Ohne Kategorie';
+                        const name = entry.Name ? entry.Name._.trim() : '';
+                        const kategorie = entry.Kategorie ? entry.Kategorie._.trim() : 'Ohne Kategorie';
 
-                    return {
-                        datum: entry.Timestamp._,
-                        name: name === '' ? 'Anonym' : name,
-                        kategorie,
-                        these: entry.These._.trim()
-                    };
+                        return {
+                            nr: index + 1,
+                            datum: entry.Timestamp._,
+                            name: name === '' ? 'Anonym' : name,
+                            kategorie,
+                            these: entry.These._.trim(),
+                            geloescht: entry.Geloescht._
+                        };
 
-                }).sort(compare);
+                    })
+                    .filter(entry => !entry.geloescht)
+                    .sort(compare);
 
-            }, err => {
-                // TODO: Handle error
+                this.isLoadingEntries = false;
+
+            }, () => {
+                this.isLoadingEntries = false;
+                this.toastr.error('Bitte versuche es zu einem späteren Zeitpunkt nochmal.', 'Es gab einen Fehler');
             });
 
     }

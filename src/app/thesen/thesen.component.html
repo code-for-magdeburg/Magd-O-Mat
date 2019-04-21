@@ -1,0 +1,23 @@
+
+<div class="py-5">
+
+    <table class="table table-borderless table-sm">
+        <thead class="thead-light">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Kategorie</th>
+            <th scope="col">These</th>
+            <th scope="col">Eingereicht von</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let these of thesen">
+            <th scope="row">{{ these.nr }}</th>
+            <td>{{ these.kategorie }}</td>
+            <td>{{ these.these }}</td>
+            <td>{{ these.name }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
