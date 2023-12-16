@@ -1,0 +1,46 @@
+
+<div class="text-center py-3 py-md-5">
+
+    <div *ngIf="showTeaser" class="card shadow mx-1 my-5">
+        <div class="card-body">
+            <h2 class="text-black-50">Hier startet in Kürze der Wahl-O-Mat für die Kommunalwahl von Magdeburg 2019.</h2>
+        </div>
+    </div>
+
+    <div *ngIf="!showTeaser" class="mx-1 mt-3">
+        <h5 class="text-center mb-3">Willkommen beim MAGD-O-MAT, dem Thesen-Check zur Magdeburger Kommunalwahl 2019!</h5>
+        <ol class="ps-3 mt-1 text-start">
+            <li>Lies Dir die folgenden Thesen durch und entscheide, ob Du zustimmst, neutral bist, oder nicht zustimmst.</li>
+            <li>Schau Dir an, wie die Positionen der Parteien und Wählergemeinschaften zu den Thesen sind.</li>
+            <li>Schau Dir die Wahlprogramme an oder sprich die Kandidierenden direkt an, um sie besser kennen zu lernen.</li>
+            <li>Geh am 26. Mai wählen! Du kannst auch per Brief abstimmen. Check Deine Wahlbenachrichtung für weitere Informationen.</li>
+        </ol>
+    </div>
+
+    <p>Mehr Informationen findest du im <a [routerLink]="'/tagebuch'">Projekt-Tagebuch</a> und auf der <a [routerLink]="'/hilfe'">Hilfeseite</a>.</p>
+
+    <a *ngIf="!showTeaser" [routerLink]="'/thesen-check'" class="btn btn-primary d-block btn-lg mt-3"><fa-icon [icon]="faHandPointRight" class="me-3"></fa-icon>Thesen-Check starten<fa-icon [icon]="faHandPointLeft" class="ms-3"></fa-icon></a>
+
+</div>
+
+<div class="text-center my-5 py-3x">
+    <div class="bg-white ms-n3 mt-n3 me-n3 d-none d-md-block" style="height: 60px;">
+        <a href="http://www.netz39.de/" target="_blank" class="ms-0 ms-md-5"><img src="/assets/img/Logo-Netz39_BW.png" style="height: 50px;"></a>
+        <a href="https://codefor.de/magdeburg" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-CodeForDE_BW.jpg" style="height: 50px;"></a>
+        <a href="http://mrappware.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-MrAppWare_BW.png" style="height: 50px;"></a>
+        <a href="https://lka-agentur.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-LKA_BW.png" style="height: 50px;"></a>
+        <a href="https://miteinander-ev.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-Miteinander_BW.png" style="height: 50px;"></a>
+        <a href="https://www.magdeburg.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-OttoLebtDemokratie.jpg" style="height: 50px;"></a>
+        <a href="https://www.demokratie-leben.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-BMFSFJ_DL.jpg" style="height: 50px;"></a>
+    </div>
+
+    <div class="bg-white ms-n3 mt-n3 me-n3 d-md-none" style="height: 120px;">
+        <a href="http://www.netz39.de/" target="_blank" class="ms-0 ms-md-5"><img src="/assets/img/Logo-Netz39_BW.png" style="height: 50px;"></a>
+        <a href="https://codefor.de/magdeburg" target="_blank" class="ms-2 ms-md-5 d-none d-md-block"><img src="/assets/img/Logo-CodeForDE_BW.jpg" style="height: 50px;"></a>
+        <a href="http://mrappware.de/" target="_blank" class="ms-2 ms-md-5 d-none d-md-block"><img src="/assets/img/Logo-MrAppWare_BW.png" style="height: 50px;"></a>
+        <a href="https://lka-agentur.de/" target="_blank" class="ms-2 ms-md-5"><img src="/assets/img/Logo-LKA_BW.png" style="height: 50px;"></a>
+        <a href="https://miteinander-ev.de/" target="_blank" class="ms-3 ms-md-5"><img src="/assets/img/Logo-Miteinander_BW.png" style="height: 50px;"></a>
+        <a href="https://www.magdeburg.de/" target="_blank" class="ms-2 ms-md-5"><img src="/assets/img/Logo-OttoLebtDemokratie.jpg" style="height: 50px;"></a>
+        <a href="https://www.demokratie-leben.de/" target="_blank" class="ms-2 ms-md-5"><img src="/assets/img/Logo-BMFSFJ_DL.jpg" style="height: 50px;"></a>
+    </div>
+</div>
