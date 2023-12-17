@@ -9,7 +9,6 @@ import localeDe from '@angular/common/locales/de';
 import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
-import { TagebuchComponent } from './tagebuch/tagebuch.component';
 import { StartComponent } from './start/start.component';
 import { ThesenCheckComponent } from './thesen-check/thesen-check.component';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
@@ -30,7 +29,6 @@ registerLocaleData(localeDe, 'de');
     ImpressumComponent,
     UeberUnsComponent,
     StartComponent,
-    TagebuchComponent,
     ThesenCheckComponent
   ],
   imports: [
