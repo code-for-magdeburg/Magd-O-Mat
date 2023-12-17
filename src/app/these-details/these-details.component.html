@@ -1,29 +1,29 @@
 <div class="modal-header">
-    <h5 class="modal-title pull-left">These {{ these.id + 1 }}/{{ anzahlThesen }}</h5>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()"><span aria-hidden="true">&times;</span></button>
+    <h5 class="modal-title">These {{ (these?.id || 0) + 1 }}/{{ anzahlThesen }}</h5>
+    <button type="button" class="btn-close float-end" aria-label="Close" (click)="bsModalRef.hide()"></button>
 </div>
 
 <div class="modal-body pt-0">
 
-    <h5 class="m-3 m-md-5 text-center">{{ these.text }}</h5>
+    <h5 class="m-3 m-md-5 text-center">{{ these?.text }}</h5>
 
-    <span class="text-muted small ml-3">Deine Wertung:</span>
-    <fa-icon *ngIf="these.wertung === 'ja'" class="text-success ml-2" [icon]="['far', 'smile']"></fa-icon>
-    <fa-icon *ngIf="these.wertung === 'neutral'" class="text-warning ml-2" [icon]="['far', 'meh']"></fa-icon>
-    <fa-icon *ngIf="these.wertung === 'nein'" class="text-danger ml-2" [icon]="['far', 'frown']"></fa-icon>
-    <span *ngIf="these.wertung === 'ohne'" class="text-muted ml-2">-</span>
-    <fa-icon *ngIf="these.doppeltGewertet && these.wertung !== 'ohne'" class="text-muted ml-2" [icon]="['fas', 'heart']"></fa-icon>
+    <span class="text-muted small ms-3">Deine Wertung:</span>
+    <fa-icon *ngIf="these?.wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
+    <fa-icon *ngIf="these?.wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
+    <fa-icon *ngIf="these?.wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
+    <span *ngIf="these?.wertung === 'ohne'" class="text-muted ms-2">-</span>
+    <fa-icon *ngIf="these?.doppeltGewertet && these?.wertung !== 'ohne'" class="text-muted ms-2" [icon]="faHeart"></fa-icon>
 
     <div class="list-group list-group-flush mt-3">
         <div *ngFor="let partei of parteien" class="list-group-item d-flex flex-row px-0">
 
             <img class="img-thumbnail float-left" style="width: 50px; height: 50px;" [src]="'assets/' + wahl + '/img/' + partei.logo">
 
-            <span class="flex-fill align-self-center ml-3 my-0">{{ partei.nameLang }}</span>
+            <span class="flex-fill align-self-center ms-3 my-0">{{ partei.nameLang }}</span>
 
-            <fa-icon *ngIf="partei.thesen[these.id] === 'ja'" class="align-self-center text-success ml-3" [icon]="['far', 'smile']" size="2x"></fa-icon>
-            <fa-icon *ngIf="partei.thesen[these.id] === 'neutral'" class="align-self-center text-warning ml-3" [icon]="['far', 'meh']" size="2x"></fa-icon>
-            <fa-icon *ngIf="partei.thesen[these.id] === 'nein'" class="align-self-center text-danger ml-3" [icon]="['far', 'frown']" size="2x"></fa-icon>
+            <fa-icon *ngIf="partei.thesen[these?.id || 0] === 'ja'" class="align-self-center text-success ms-3" [icon]="faSmile" size="2x"></fa-icon>
+            <fa-icon *ngIf="partei.thesen[these?.id || 0] === 'neutral'" class="align-self-center text-warning ms-3" [icon]="faMeh" size="2x"></fa-icon>
+            <fa-icon *ngIf="partei.thesen[these?.id || 0] === 'nein'" class="align-self-center text-danger ms-3" [icon]="faFrown" size="2x"></fa-icon>
 
         </div>
     </div>

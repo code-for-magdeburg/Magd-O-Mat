@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-tagebuch',
   templateUrl: './tagebuch.component.html',
-  styleUrls: ['./tagebuch.component.css']
+  styleUrls: ['./tagebuch.component.scss']
 })
-export class TagebuchComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class TagebuchComponent {
+  faArrowLeft = faArrowLeft;
 }

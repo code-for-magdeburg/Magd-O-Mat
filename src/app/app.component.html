@@ -1,22 +1,18 @@
 
 <header class="text-center p-3 p-md-5 bg-light">
-<!--
-    <img src="/assets/img/Logo-OttoLebtDemokratie.jpg" style="height: 88px; margin-right: -70px;" class="d-none d-md-inline float-left">
-    <img src="/assets/img/Logo-BMFSFJ_DL.jpg" style="height: 88px; margin-left: -297px;" class="d-none d-md-inline float-right">
--->
-    <h1 class="text-uppercase text-primary" style="font-family: 'Permanent Marker';">MAGD-O-MAT</h1>
-    <h5 class="text-secondary">Der Thesen-Check zur Kommunalwahl 2019 in Magdeburg</h5>
+  <h1 class="text-uppercase text-primary" style="font-family: 'Permanent Marker',serif;">MAGD-O-MAT</h1>
+  <h5 class="text-secondary">Der Thesen-Check zur Kommunalwahl 2019 in Magdeburg</h5>
 </header>
 
 <main role="main" class="container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </main>
 
 <footer class="text-center p-3 bg-light mt-3">
-    <ul class="list-inline mb-0">
-        <li class="list-inline-item mr-3"><a [routerLink]="'/ueber-uns'">Über uns</a></li>
-        <li class="list-inline-item ml-3 mr-3"><a [routerLink]="'/tagebuch'">Tagebuch</a></li>
-        <li class="list-inline-item ml-3 mr-3"><a [routerLink]="'/hilfe'">Hilfe</a></li>
-        <li class="list-inline-item ml-3"><a [routerLink]="'/impressum'">Impressum</a></li>
-    </ul>
+  <ul class="list-inline mb-0">
+    <li class="list-inline-item me-3"><a [routerLink]="'/ueber-uns'">Über uns</a></li>
+    <li class="list-inline-item ms-3 me-3"><a [routerLink]="'/tagebuch'">Tagebuch</a></li>
+    <li class="list-inline-item ms-3 me-3"><a [routerLink]="'/hilfe'">Hilfe</a></li>
+    <li class="list-inline-item ms-3"><a [routerLink]="'/impressum'">Impressum</a></li>
+  </ul>
 </footer>
