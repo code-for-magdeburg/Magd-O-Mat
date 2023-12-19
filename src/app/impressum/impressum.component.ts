@@ -8,5 +8,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
     styleUrls: ['./impressum.component.scss']
 })
 export class ImpressumComponent {
+
+
   faArrowLeft = faArrowLeft;
+
+
 }

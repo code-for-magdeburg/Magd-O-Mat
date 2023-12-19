@@ -9,6 +9,9 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./hilfe.component.scss']
 })
 export class HilfeComponent {
+
+
   faArrowLeft = faArrowLeft;
-  faFilePdf = faFilePdf;
+  
+
 }

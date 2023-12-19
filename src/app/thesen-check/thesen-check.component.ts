@@ -8,7 +8,7 @@ import { These } from '../model/These';
 import { Partei } from '../model/Partei';
 import { faArrowLeft, faRedo, faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import { faFrown, faHeart as farHeart, faMeh, faSmile, faFilePdf } from '@fortawesome/free-regular-svg-icons';
-import { firstValueFrom, forkJoin } from 'rxjs';
+import { firstValueFrom } from 'rxjs';
 
 
 type ErgebnisThese = {
