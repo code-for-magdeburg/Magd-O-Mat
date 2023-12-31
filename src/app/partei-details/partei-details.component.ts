@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { environment } from 'src/environments/environment';
 import { Partei } from '../model/Partei';
@@ -6,6 +6,7 @@ import { faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
+import { TheseEingabe } from '../model/These';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, FontAwesomeModule],
   standalone: true
 })
-export class ParteiDetailsComponent implements OnInit {
+export class ParteiDetailsComponent {
 
 
   protected readonly faSmile = faSmile;
@@ -23,22 +24,12 @@ export class ParteiDetailsComponent implements OnInit {
   protected readonly faFrown = faFrown;
   protected readonly faHeart = faHeart;
 
-  partei?: Partei;
+  partei!: Partei;
   wahl = environment.wahl;
-  thesen: any[] = [];
+  theseEingaben: TheseEingabe[] = [];
 
 
   constructor(public bsModalRef: BsModalRef) {
-  }
-
-
-  ngOnInit(): void {
-
-    const partei = this.partei;
-    if (partei) {
-      this.thesen.forEach(these => these.wertungPartei = partei.thesen[these.id]);
-    }
-
   }
 
 
