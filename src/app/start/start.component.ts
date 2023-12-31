@@ -3,17 +3,17 @@ import { faHandPointLeft, faHandPointRight } from '@fortawesome/free-solid-svg-i
 
 
 @Component({
-    selector: 'app-start',
-    templateUrl: './start.component.html',
-    styleUrls: ['./start.component.scss']
+  selector: 'app-start',
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.scss']
 })
 export class StartComponent {
 
 
-    showTeaser = false;
+  protected readonly showTeaser = false;
 
-    faHandPointRight = faHandPointRight;
-    faHandPointLeft = faHandPointLeft;
+  protected readonly faHandPointRight = faHandPointRight;
+  protected readonly faHandPointLeft = faHandPointLeft;
 
 
 }

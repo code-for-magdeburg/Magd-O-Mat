@@ -3,10 +3,10 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
-    selector: 'app-ueber-uns',
-    templateUrl: './ueber-uns.component.html',
-    styleUrls: ['./ueber-uns.component.scss']
+  selector: 'app-ueber-uns',
+  templateUrl: './ueber-uns.component.html',
+  styleUrls: ['./ueber-uns.component.scss']
 })
 export class UeberUnsComponent {
-  faArrowLeft = faArrowLeft;
+  protected readonly faArrowLeft = faArrowLeft;
 }

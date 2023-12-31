@@ -8,12 +8,12 @@
   <h5 class="m-3 m-md-5 text-center">{{ these?.text }}</h5>
 
   <span class="text-muted small ms-3">Deine Wertung:</span>
-  <fa-icon *ngIf="these?.wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
-  <fa-icon *ngIf="these?.wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
-  <fa-icon *ngIf="these?.wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
-  <span *ngIf="these?.wertung === 'ohne'" class="text-muted ms-2">-</span>
+  <fa-icon *ngIf="theseEingabe?.wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
+  <fa-icon *ngIf="theseEingabe?.wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
+  <fa-icon *ngIf="theseEingabe?.wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
+  <span *ngIf="theseEingabe?.wertung === 'ohne'" class="text-muted ms-2">-</span>
   <fa-icon
-    *ngIf="these?.doppeltGewertet && these?.wertung !== 'ohne'"
+    *ngIf="theseEingabe?.doppeltGewertet && theseEingabe?.wertung !== 'ohne'"
     class="text-muted ms-2"
     [icon]="faHeart"
   ></fa-icon>

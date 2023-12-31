@@ -4,17 +4,12 @@ import { ParteiDetailsComponent } from '../partei-details/partei-details.compone
 import { TheseDetailsComponent } from '../these-details/these-details.component';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { These } from '../model/These';
+import { These, TheseEingabe, TheseWertung } from '../model/These';
 import { Partei } from '../model/Partei';
-import { faArrowLeft, faRedo, faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
-import { faFrown, faHeart as farHeart, faMeh, faSmile, faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import { faArrowLeft, faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faFrown, faHeart as farHeart, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { firstValueFrom } from 'rxjs';
 
-
-type ErgebnisThese = {
-  these: These;
-  maxPunkte: number;
-};
 
 type ErgebnisPartei = {
   partei: Partei;
@@ -43,11 +38,11 @@ export class ThesenCheckComponent implements OnInit {
 
   thesen: These[] = [];
   parteien: Partei[] = [];
-  ergebnisseThesen: ErgebnisThese[] = [];
+
+  thesenEingaben: TheseEingabe[] = [];
   ergebnisseParteien: ErgebnisPartei[] = [];
 
   aktuelleTheseIndex = -1;
-  aktuelleThese?: These;
 
   wahl = environment.wahl;
 
@@ -59,69 +54,63 @@ export class ThesenCheckComponent implements OnInit {
 
 
   async ngOnInit() {
-    await this.neustart();
+    await Promise.all([this.ladeThesen(), this.ladeParteien()])
+    this.neustart();
   }
 
 
   waehleThese(index: number) {
     this.aktuelleTheseIndex = index;
-    this.aktuelleThese = this.thesen[this.aktuelleTheseIndex];
   }
 
 
   stimmeJa() {
-    if (this.aktuelleThese) {
-      this.aktuelleThese.wertung = 'ja';
-      this.aktuelleThese.gewertet = true;
+    if (this.aktuelleTheseIndex > -1) {
+      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'ja';
       this.naechsteTheseOderAuswertung();
     }
   }
 
 
   stimmeEgal() {
-    if (this.aktuelleThese) {
-      this.aktuelleThese.wertung = 'neutral';
-      this.aktuelleThese.gewertet = true;
+    if (this.aktuelleTheseIndex > -1) {
+      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'neutral';
       this.naechsteTheseOderAuswertung();
     }
   }
 
 
   stimmeNein() {
-    if (this.aktuelleThese) {
-      this.aktuelleThese.wertung = 'nein';
-      this.aktuelleThese.gewertet = true;
+    if (this.aktuelleTheseIndex > -1) {
+      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'nein';
       this.naechsteTheseOderAuswertung();
     }
   }
 
 
   ueberspringen() {
-    if (this.aktuelleThese) {
-      this.aktuelleThese.wertung = 'ohne';
-      this.aktuelleThese.gewertet = false;
+    if (this.aktuelleTheseIndex > -1) {
+      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'ohne';
       this.naechsteTheseOderAuswertung();
     }
   }
 
 
   zurueck() {
-
     if (this.aktuelleTheseIndex > 0) {
       this.waehleThese(this.aktuelleTheseIndex - 1);
     }
-
   }
 
 
-  async neustart() {
+  neustart() {
+    this.resetEingaben();
     this.modus = 'Eingabe';
-    await Promise.all([this.ladeThesen(), this.ladeParteien()])
     this.waehleThese(0);
   }
 
 
-  zeigePartei(partei: any) {
+  zeigePartei(partei: Partei) {
     this.modalRef = this.modalService.show(
       ParteiDetailsComponent,
       { initialState: { partei, thesen: this.thesen } }
@@ -129,10 +118,11 @@ export class ThesenCheckComponent implements OnInit {
   }
 
 
-  zeigeThese(these: any) {
+  zeigeThese(these: These, theseEingabe: TheseEingabe) {
     this.modalRef = this.modalService.show(TheseDetailsComponent, {
       initialState: {
         these,
+        theseEingabe,
         anzahlThesen: this.thesen.length,
         parteien: this.parteien
       }
@@ -141,22 +131,20 @@ export class ThesenCheckComponent implements OnInit {
 
 
   private async ladeThesen() {
-
-    const thesen = await firstValueFrom(this.http.get<These[]>(`assets/${this.wahl}/thesen.json`));
-    this.thesen = thesen.map(these => ({
-      id: these.id,
-      kategorie: these.kategorie,
-      text: these.text,
-      doppeltGewertet: false,
-      gewertet: false,
-      wertung: 'ohne'
-    }));
-
+    this.thesen = await firstValueFrom(this.http.get<These[]>(`assets/${this.wahl}/thesen.json`));
   }
 
 
   private async ladeParteien() {
     this.parteien = await firstValueFrom(this.http.get<Partei[]>(`assets/${this.wahl}/parteien.json`));
+  }
+
+
+  private resetEingaben() {
+    this.thesenEingaben = this.thesen.map(_ => ({
+      wertung: 'ohne',
+      doppeltGewertet: false
+    }));
   }
 
 
@@ -166,29 +154,20 @@ export class ThesenCheckComponent implements OnInit {
 
       this.modus = 'Auswertung';
 
-      this.ergebnisseThesen = [];
-      for (const these of this.thesen) {
-        this.ergebnisseThesen.push({
-          these,
-          maxPunkte: this.bestimmeMaxPunkte(these)
-        });
-      }
+      const ergebnisseThesen = this.thesenEingaben.map((eingabe, index) => ({
+        these: this.thesen[index],
+        maxPunkte: this.bestimmeMaxPunkte(eingabe, index)
+      }));
 
-      const maxPunkte = this.ergebnisseThesen.reduce(
+      const maxPunkte = ergebnisseThesen.reduce(
         (summe, ergebnis) => summe + ergebnis.maxPunkte,
         0
       );
 
-      this.ergebnisseParteien = [];
-      for (const partei of this.parteien) {
-
-        this.ergebnisseParteien.push({
-          partei,
-          prozent: this.berechneProzent(partei, maxPunkte)
-        });
-
-      }
-
+      this.ergebnisseParteien = this.parteien.map(partei => ({
+        partei,
+        prozent: this.berechneProzent(partei, maxPunkte)
+      }));
       this.ergebnisseParteien.sort((a, b) => b.prozent - a.prozent);
 
     } else {
@@ -198,43 +177,11 @@ export class ThesenCheckComponent implements OnInit {
   }
 
 
-  private bestimmeMaxPunkte(these: These): number {
+  private bestimmeMaxPunkte(theseEingabe: TheseEingabe, theseIndex: number): number {
 
     const punkteProPartei = this.parteien.map(partei => {
-
-      const wertungPartei = partei.thesen[these.id];
-
-      let punkte = 0;
-      switch (these.wertung) {
-
-        case 'ja':
-          if (wertungPartei === 'ja') {
-            punkte = 2;
-          } else if (wertungPartei === 'neutral') {
-            punkte = 1;
-          }
-          break;
-
-        case 'neutral':
-          if (wertungPartei === 'neutral') {
-            punkte = 2;
-          } else if (wertungPartei === 'ja' || wertungPartei === 'nein') {
-            punkte = 1;
-          }
-          break;
-
-        case 'nein':
-          if (wertungPartei === 'nein') {
-            punkte = 2;
-          } else if (wertungPartei === 'neutral') {
-            punkte = 1;
-          }
-          break;
-
-      }
-
-      return these.doppeltGewertet ? 2 * punkte : punkte;
-
+      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[theseIndex]);
+      return theseEingabe.doppeltGewertet ? 2 * punkte : punkte;
     });
 
     return Math.max(...punkteProPartei);
@@ -250,44 +197,30 @@ export class ThesenCheckComponent implements OnInit {
 
     let summe = 0;
 
-    for (const these of this.thesen) {
-
-      let punkte = 0;
-
-      switch (partei.thesen[these.id]) {
-
-        case 'ja':
-          if (these.wertung === 'ja') {
-            punkte = 2;
-          } else if (these.wertung === 'neutral') {
-            punkte = 1;
-          }
-          break;
-
-        case 'neutral':
-          if (these.wertung === 'neutral') {
-            punkte = 2;
-          } else if (these.wertung === 'ja' || these.wertung === 'nein') {
-            punkte = 1;
-          }
-          break;
-
-        case 'nein':
-          if (these.wertung === 'nein') {
-            punkte = 2;
-          } else if (these.wertung === 'neutral') {
-            punkte = 1;
-          }
-          break;
-
-      }
-
-      summe += these.doppeltGewertet ? 2 * punkte : punkte;
-
-    }
+    this.thesenEingaben.forEach((theseEingabe, index) => {
+      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[index]);
+      summe += theseEingabe.doppeltGewertet ? 2 * punkte : punkte;
+    });
 
     return summe / maxPunkte;
 
+  }
+
+
+  private berechnePunkteProWertung(wertungEingabe: TheseWertung, wertungPartei: TheseWertung): number {
+    let punkte = 0;
+    switch (wertungEingabe) {
+      case 'ja':
+        punkte = wertungPartei === 'ja' ? 2 : (wertungPartei === 'neutral' ? 1 : 0);
+        break;
+      case 'neutral':
+        punkte = wertungPartei === 'neutral' ? 2 : (wertungPartei === 'ja' || wertungPartei === 'nein' ? 1 : 0);
+        break;
+      case 'nein':
+        punkte = wertungPartei === 'nein' ? 2 : (wertungPartei === 'neutral' ? 1 : 0);
+        break;
+    }
+    return punkte;
   }
 
 

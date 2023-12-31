@@ -18,10 +18,10 @@ import { CommonModule } from '@angular/common';
 export class ParteiDetailsComponent implements OnInit {
 
 
-  faSmile = faSmile;
-  faMeh = faMeh;
-  faFrown = faFrown;
-  faHeart = faHeart;
+  protected readonly faSmile = faSmile;
+  protected readonly faMeh = faMeh;
+  protected readonly faFrown = faFrown;
+  protected readonly faHeart = faHeart;
 
   partei?: Partei;
   wahl = environment.wahl;
