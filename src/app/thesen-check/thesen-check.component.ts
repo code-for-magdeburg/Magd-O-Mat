@@ -10,6 +10,7 @@ import { faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
 import { faFilePdf, faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { firstValueFrom, map } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { getParteiLogo, getPositionenDokument } from '../helpers';
 
 
 type ErgebnisPartei = {
@@ -32,6 +33,9 @@ export class ThesenCheckComponent implements OnInit {
   protected readonly faFrown = faFrown;
   protected readonly faRedo = faRedo;
   protected readonly faFilePdf = faFilePdf;
+
+  protected readonly getParteiLogo = getParteiLogo;
+  protected readonly getPositionenDokument = getPositionenDokument;
 
   modus = 'Eingabe';
 
@@ -139,16 +143,6 @@ export class ThesenCheckComponent implements OnInit {
         parteien: this.parteien
       }
     });
-  }
-
-
-  getParteiLogo(partei: Partei): string {
-    return `assets/${this.wahlSlug}/img/${partei.logo}`;
-  }
-
-
-  getPositionenDokument(): string {
-    return `/assets/${this.wahlSlug}/Alle_Positionen.pdf`;
   }
 
 

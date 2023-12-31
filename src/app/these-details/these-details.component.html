@@ -21,7 +21,7 @@
   <div class="list-group list-group-flush mt-3">
     <div *ngFor="let partei of parteien" class="list-group-item d-flex flex-row px-0">
 
-      <img class="img-thumbnail float-start partei-thumbnail" [src]="getParteiLogoUrl(partei)">
+      <img class="img-thumbnail float-start partei-thumbnail" [src]="getParteiLogo(wahlSlug, partei)">
 
       <span class="flex-fill align-self-center ms-3 my-0">{{ partei.nameLang }}</span>
 

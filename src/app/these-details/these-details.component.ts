@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Partei } from '../model/Partei';
 import { These, TheseEingabe } from '../model/These';
 import { CommonModule } from '@angular/common';
+import { getParteiLogo } from '../helpers';
 
 
 @Component({
@@ -23,6 +24,8 @@ export class TheseDetailsComponent {
   protected readonly faFrown = faFrown;
   protected readonly faHeart = faHeart;
 
+  protected readonly getParteiLogo = getParteiLogo;
+
   these!: These;
   theseEingabe!: TheseEingabe
   anzahlThesen!: number;
@@ -31,11 +34,6 @@ export class TheseDetailsComponent {
 
 
   constructor(public bsModalRef: BsModalRef) {
-  }
-
-
-  getParteiLogoUrl(partei: Partei): string {
-    return `assets/${this.wahlSlug}/img/${partei.logo}`;
   }
 
 

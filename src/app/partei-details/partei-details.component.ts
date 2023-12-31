@@ -6,6 +6,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { TheseEingabe } from '../model/These';
+import { getParteiHref, getParteiLogo } from '../helpers';
 
 
 @Component({
@@ -23,24 +24,15 @@ export class ParteiDetailsComponent {
   protected readonly faFrown = faFrown;
   protected readonly faHeart = faHeart;
 
+  protected readonly getParteiLogo = getParteiLogo;
+  protected readonly getParteiHref = getParteiHref;
+
   partei!: Partei;
   wahlSlug!: string;
   theseEingaben: TheseEingabe[] = [];
 
 
   constructor(public bsModalRef: BsModalRef) {
-  }
-
-
-  getParteiLogoUrl(): string {
-    return `assets/${this.wahlSlug}/img/${this.partei.logo}`;
-  }
-
-
-  getParteiHref(): string {
-    return this.partei.internetadresse.startsWith('http://') || this.partei.internetadresse.startsWith('https://')
-      ? this.partei.internetadresse
-      : `http://${this.partei.internetadresse}`;
   }
 
 
