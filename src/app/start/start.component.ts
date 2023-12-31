@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { faHandPointLeft, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import { environment } from '../../environments/environment';
 
 
 @Component({
-    selector: 'app-start',
-    templateUrl: './start.component.html',
-    styleUrls: ['./start.component.scss']
+  selector: 'app-start',
+  templateUrl: './start.component.html',
+  styleUrls: ['./start.component.scss']
 })
 export class StartComponent {
 
 
-    showTeaser = false;
+  protected readonly showTeaser = environment.showTeaser;
 
-    faHandPointRight = faHandPointRight;
-    faHandPointLeft = faHandPointLeft;
+  protected readonly faHandPointRight = faHandPointRight;
+  protected readonly faHandPointLeft = faHandPointLeft;
 
 
 }

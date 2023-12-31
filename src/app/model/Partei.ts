@@ -1,3 +1,5 @@
+import { TheseWertung } from './These';
+
 export type Partei = {
   id: number;
   nameKurz: string;
@@ -5,5 +7,5 @@ export type Partei = {
   logo: string;
   beschreibung: string;
   internetadresse: string;
-  thesen: string[];
+  thesen: TheseWertung[];
 };

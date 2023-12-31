@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -9,6 +8,5 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./hilfe.component.scss']
 })
 export class HilfeComponent {
-  faArrowLeft = faArrowLeft;
-  faFilePdf = faFilePdf;
+  protected readonly faArrowLeft = faArrowLeft;
 }

@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  wahl: '2019-kwmd'
+  showTeaser: false,
+  wahl: '2019-kwmd',
 };

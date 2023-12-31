@@ -1,6 +1,5 @@
-
-<header class="text-center p-3 p-md-5 bg-light">
-  <h1 class="text-uppercase text-primary" style="font-family: 'Permanent Marker',serif;">MAGD-O-MAT</h1>
+<header class="text-center p-3 p-md-5 bg-body-tertiary">
+  <h1 class="text-uppercase text-primary main-title">MAGD-O-MAT</h1>
   <h5 class="text-secondary">Der Thesen-Check zur Kommunalwahl 2019 in Magdeburg</h5>
 </header>
 
@@ -8,11 +7,16 @@
   <router-outlet></router-outlet>
 </main>
 
-<footer class="text-center p-3 bg-light mt-3">
-  <ul class="list-inline mb-0">
-    <li class="list-inline-item me-3"><a [routerLink]="'/ueber-uns'">Über uns</a></li>
-    <li class="list-inline-item ms-3 me-3"><a [routerLink]="'/tagebuch'">Tagebuch</a></li>
-    <li class="list-inline-item ms-3 me-3"><a [routerLink]="'/hilfe'">Hilfe</a></li>
-    <li class="list-inline-item ms-3"><a [routerLink]="'/impressum'">Impressum</a></li>
+<footer class="text-center p-3 bg-body-tertiary mt-auto">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a [routerLink]="'/ueber-uns'" class="nav-link px-2 text-body-secondary">Über uns</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/hilfe'" class="nav-link px-2 text-body-secondary">Hilfe</a>
+    </li>
+    <li class="nav-item">
+      <a [routerLink]="'/impressum'" class="nav-link px-2 text-body-secondary">Impressum</a>
+    </li>
   </ul>
 </footer>

@@ -1,0 +1,42 @@
+<div class="row my-3">
+
+  <div class="col">
+    <button
+      type="button"
+      class="btn btn-lg w-100"
+      [class.btn-outline-success]="theseEingabe.wertung !== 'ja'"
+      [class.btn-success]="theseEingabe.wertung === 'ja'"
+      (click)="handleWertung('ja')"
+    >
+      <fa-icon [icon]="faSmile" size="2x"></fa-icon>
+    </button>
+    <small class="d-block text-center">Stimme zu</small>
+  </div>
+
+  <div class="col">
+    <button
+      type="button"
+      class="btn btn-lg w-100"
+      [class.btn-outline-warning]="theseEingabe.wertung !== 'neutral'"
+      [class.btn-warning]="theseEingabe.wertung === 'neutral'"
+      (click)="handleWertung('neutral')"
+    >
+      <fa-icon [icon]="faMeh" size="2x"></fa-icon>
+    </button>
+    <small class="d-block text-center">Neutral</small>
+  </div>
+
+  <div class="col">
+    <button
+      type="button"
+      class="btn btn-lg w-100"
+      [class.btn-outline-danger]="theseEingabe.wertung !== 'nein'"
+      [class.btn-danger]="theseEingabe.wertung === 'nein'"
+      (click)="handleWertung('nein')"
+    >
+      <fa-icon [icon]="faFrown" size="2x"></fa-icon>
+    </button>
+    <small class="d-block text-center">Stimme nicht zu</small>
+  </div>
+
+</div>

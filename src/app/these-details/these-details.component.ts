@@ -5,8 +5,8 @@ import { faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Partei } from '../model/Partei';
-import { These } from '../model/These';
-import { CommonModule } from "@angular/common";
+import { These, TheseEingabe } from '../model/These';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -19,12 +19,13 @@ import { CommonModule } from "@angular/common";
 export class TheseDetailsComponent {
 
 
-  faSmile = faSmile;
-  faMeh = faMeh;
-  faFrown = faFrown;
-  faHeart = faHeart;
+  protected readonly faSmile = faSmile;
+  protected readonly faMeh = faMeh;
+  protected readonly faFrown = faFrown;
+  protected readonly faHeart = faHeart;
 
   these?: These;
+  theseEingabe?: TheseEingabe
   anzahlThesen = 0;
   parteien: Partei[] = [];
   wahl = environment.wahl;

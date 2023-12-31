@@ -1,6 +1,5 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -9,7 +8,6 @@ import localeDe from '@angular/common/locales/de';
 import { HilfeComponent } from './hilfe/hilfe.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { UeberUnsComponent } from './ueber-uns/ueber-uns.component';
-import { TagebuchComponent } from './tagebuch/tagebuch.component';
 import { StartComponent } from './start/start.component';
 import { ThesenCheckComponent } from './thesen-check/thesen-check.component';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
@@ -18,9 +16,22 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { RouterModule, Routes } from '@angular/router';
+import { TheseCardComponent } from './thesen-check/these-card/these-card.component';
+import { TheseButtonsComponent } from './thesen-check/these-buttons/these-buttons.component';
 
 
 registerLocaleData(localeDe, 'de');
+
+
+const routes: Routes = [
+  { path: '', component: StartComponent },
+  { path: 'start', component: StartComponent },
+  { path: 'ueber-uns', component: UeberUnsComponent },
+  { path: 'hilfe', component: HilfeComponent },
+  { path: 'impressum', component: ImpressumComponent },
+  { path: 'thesen-check', component: ThesenCheckComponent },
+];
 
 
 @NgModule({
@@ -30,12 +41,12 @@ registerLocaleData(localeDe, 'de');
     ImpressumComponent,
     UeberUnsComponent,
     StartComponent,
-    TagebuchComponent,
-    ThesenCheckComponent
+    ThesenCheckComponent,
+    TheseCardComponent,
+    TheseButtonsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     ButtonsModule.forRoot(),
     FontAwesomeModule,
@@ -44,6 +55,7 @@ registerLocaleData(localeDe, 'de');
     ModalModule.forRoot(),
     PaginationModule.forRoot(),
     ProgressbarModule.forRoot(),
+    RouterModule.forRoot(routes)
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'de' }
