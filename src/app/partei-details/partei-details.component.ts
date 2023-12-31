@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { environment } from 'src/environments/environment';
 import { Partei } from '../model/Partei';
 import { faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -25,11 +24,23 @@ export class ParteiDetailsComponent {
   protected readonly faHeart = faHeart;
 
   partei!: Partei;
-  wahl = environment.wahl;
+  wahlSlug!: string;
   theseEingaben: TheseEingabe[] = [];
 
 
   constructor(public bsModalRef: BsModalRef) {
+  }
+
+
+  getParteiLogoUrl(): string {
+    return `assets/${this.wahlSlug}/img/${this.partei.logo}`;
+  }
+
+
+  getParteiHref(): string {
+    return this.partei.internetadresse.startsWith('http://') || this.partei.internetadresse.startsWith('https://')
+      ? this.partei.internetadresse
+      : `http://${this.partei.internetadresse}`;
   }
 
 

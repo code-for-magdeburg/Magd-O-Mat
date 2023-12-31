@@ -73,7 +73,7 @@
         (click)="zeigePartei(ergebnisPartei.partei)">
         <img
           class="img-thumbnail float-start partei-thumbnail"
-          [src]="'assets/' + wahl + '/img/' + ergebnisPartei.partei.logo"
+          [src]="getParteiLogo(ergebnisPartei.partei)"
         >
         <div class="container-fluid">
           <h5 class="float-start mt-3">{{ ergebnisPartei.partei.nameLang }}</h5>
@@ -90,7 +90,7 @@
         (click)="zeigePartei(ergebnisPartei.partei)">
         <img
           class="img-thumbnail partei-thumbnail"
-          [src]="'assets/' + wahl + '/img/' + ergebnisPartei.partei.logo"
+          [src]="getParteiLogo(ergebnisPartei.partei)"
         >
         <div class="container-fluid">
           <h5 class="float-start">{{ ergebnisPartei.partei.nameKurz }}</h5>
@@ -139,7 +139,7 @@
     <div class="text-muted my-5">
       <p>
         Eine Übersicht mit den Antworten aller Parteien auf die MAGD-O-MAT-Thesen findest du hier als
-        <a [href]="'/assets/' + wahl + '/Alle_Positionen.pdf'">
+        <a [href]="getPositionenDokument()">
           PDF
           <fa-icon [icon]="faFilePdf"></fa-icon>
         </a>.

@@ -8,7 +8,8 @@ import { These, TheseEingabe, TheseWertung } from '../model/These';
 import { Partei } from '../model/Partei';
 import { faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
 import { faFilePdf, faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, map } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 
 type ErgebnisPartei = {
@@ -42,18 +43,28 @@ export class ThesenCheckComponent implements OnInit {
 
   aktuelleTheseIndex = -1;
 
-  wahl = environment.wahl;
+  wahlSlug = environment.defaultWahl;
 
   modalRef?: BsModalRef;
 
 
-  constructor(private modalService: BsModalService, private http: HttpClient) {
+  constructor(
+    private readonly modalService: BsModalService,
+    private readonly http: HttpClient,
+    private readonly route: ActivatedRoute) {
   }
 
 
-  async ngOnInit() {
-    await Promise.all([this.ladeThesen(), this.ladeParteien()])
-    this.neustart();
+  ngOnInit() {
+
+    this.route.params
+      .pipe(map(params => params['wahlSlug']))
+      .subscribe(async wahlSlug => {
+        this.wahlSlug = wahlSlug;
+        await Promise.all([this.ladeThesen(wahlSlug), this.ladeParteien(wahlSlug)])
+        this.neustart();
+      });
+
   }
 
 
@@ -113,7 +124,7 @@ export class ThesenCheckComponent implements OnInit {
   zeigePartei(partei: Partei) {
     this.modalRef = this.modalService.show(
       ParteiDetailsComponent,
-      { initialState: { partei, theseEingaben: this.thesenEingaben } }
+      { initialState: { partei, theseEingaben: this.thesenEingaben, wahlSlug: this.wahlSlug } }
     );
   }
 
@@ -123,6 +134,7 @@ export class ThesenCheckComponent implements OnInit {
       initialState: {
         these,
         theseEingabe,
+        wahlSlug: this.wahlSlug,
         anzahlThesen: this.thesen.length,
         parteien: this.parteien
       }
@@ -130,13 +142,23 @@ export class ThesenCheckComponent implements OnInit {
   }
 
 
-  private async ladeThesen() {
-    this.thesen = await firstValueFrom(this.http.get<These[]>(`assets/${this.wahl}/thesen.json`));
+  getParteiLogo(partei: Partei): string {
+    return `assets/${this.wahlSlug}/img/${partei.logo}`;
   }
 
 
-  private async ladeParteien() {
-    this.parteien = await firstValueFrom(this.http.get<Partei[]>(`assets/${this.wahl}/parteien.json`));
+  getPositionenDokument(): string {
+    return `/assets/${this.wahlSlug}/Alle_Positionen.pdf`;
+  }
+
+
+  private async ladeThesen(wahlSlug: string) {
+    this.thesen = await firstValueFrom(this.http.get<These[]>(`assets/${wahlSlug}/thesen.json`));
+  }
+
+
+  private async ladeParteien(wahlSlug: string) {
+    this.parteien = await firstValueFrom(this.http.get<Partei[]>(`assets/${wahlSlug}/parteien.json`));
   }
 
 

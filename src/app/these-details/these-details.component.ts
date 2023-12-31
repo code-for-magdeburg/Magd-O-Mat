@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { environment } from 'src/environments/environment';
 import { faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -24,14 +23,19 @@ export class TheseDetailsComponent {
   protected readonly faFrown = faFrown;
   protected readonly faHeart = faHeart;
 
-  these?: These;
-  theseEingabe?: TheseEingabe
-  anzahlThesen = 0;
-  parteien: Partei[] = [];
-  wahl = environment.wahl;
+  these!: These;
+  theseEingabe!: TheseEingabe
+  anzahlThesen!: number;
+  parteien!: Partei[];
+  wahlSlug!: string;
 
 
   constructor(public bsModalRef: BsModalRef) {
+  }
+
+
+  getParteiLogoUrl(partei: Partei): string {
+    return `assets/${this.wahlSlug}/img/${partei.logo}`;
   }
 
 
