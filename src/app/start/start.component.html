@@ -2,13 +2,13 @@
 
   <div *ngIf="showTeaser; else intro" class="card shadow mx-1 my-5">
     <div class="card-body">
-      <h2 class="text-black-50">Hier startet in Kürze der Wahl-O-Mat für die Kommunalwahl von Magdeburg 2019.</h2>
+      <h2 class="text-black-50">Hier startet in Kürze der Wahl-O-Mat für die Magdeburger Kommunalwahl 2024.</h2>
     </div>
   </div>
 
   <ng-template #intro>
-    <div *ngIf="!showTeaser" class="mx-1 mt-3">
-      <h5 class="text-center mb-3">Willkommen beim MAGD-O-MAT, dem Thesen-Check zur Magdeburger Kommunalwahl 2019!</h5>
+    <div class="mx-1 mt-3">
+      <h5 class="text-center mb-3">Willkommen beim MAGD-O-MAT, dem Thesen-Check zur Magdeburger Kommunalwahl 2024!</h5>
       <ol class="ps-3 mt-1 text-start">
         <li>
           Lies Dir die folgenden Thesen durch und entscheide, ob Du zustimmst, neutral bist, oder nicht zustimmst.
@@ -24,7 +24,7 @@
       </ol>
     </div>
 
-    <a *ngIf="!showTeaser" [routerLink]="'/thesen-check'" class="btn btn-primary w-100 btn-lg mt-3">
+    <a [routerLink]="'/thesen-check'" class="btn btn-primary w-100 btn-lg mt-3">
       <fa-icon [icon]="faHandPointRight" class="me-3"></fa-icon>
       Thesen-Check starten
       <fa-icon [icon]="faHandPointLeft" class="ms-3"></fa-icon>
