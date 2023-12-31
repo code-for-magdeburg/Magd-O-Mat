@@ -7,6 +7,7 @@ export type These = {
 };
 
 export type TheseEingabe = {
+  these: These;
   wertung: TheseWertung;
   doppeltGewertet: boolean;
 };

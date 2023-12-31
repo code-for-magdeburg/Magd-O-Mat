@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { RouterModule, Routes } from '@angular/router';
+import { TheseCardComponent } from './thesen-check/these-card/these-card.component';
+import { TheseButtonsComponent } from './thesen-check/these-buttons/these-buttons.component';
 
 
 registerLocaleData(localeDe, 'de');
@@ -39,7 +41,9 @@ const routes: Routes = [
     ImpressumComponent,
     UeberUnsComponent,
     StartComponent,
-    ThesenCheckComponent
+    ThesenCheckComponent,
+    TheseCardComponent,
+    TheseButtonsComponent
   ],
   imports: [
     BrowserModule,

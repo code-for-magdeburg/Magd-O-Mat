@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <button
+      type="button"
+      class="card-link btn btn-link icon-link btn-sm p-0 d-md-none mb-3"
+      [disabled]="theseIndex <= 0"
+      (click)="handleZurueck()"
+    >
+      <fa-icon [icon]="faArrowLeft"></fa-icon>
+      Zurück
+    </button>
+    <button type="button" class="card-link btn btn-link btn-sm p-0 float-end" (click)="handleUeberspringen()">
+      These überspringen
+    </button>
+    <h6 class="card-title mb-3 text-muted">These {{ theseIndex + 1 }}/{{ anzahlThesen }}</h6>
+    <h5 class="card-text m-3 m-md-5 text-center">{{ theseEingabe.these.text }}</h5>
+    <button
+      type="button"
+      class="btn btn-sm icon-link"
+      [class.btn-light]="!theseEingabe.doppeltGewertet"
+      [class.btn-dark]="theseEingabe.doppeltGewertet"
+      [(ngModel)]="theseEingabe.doppeltGewertet"
+      btnCheckbox
+    >
+      <fa-icon [icon]="theseEingabe.doppeltGewertet ? fasHeart : farHeart"></fa-icon>
+      {{ theseEingabe.doppeltGewertet ? 'Doppelt gewertet' : 'Doppelt werten' }}
+    </button>
+  </div>
+</div>

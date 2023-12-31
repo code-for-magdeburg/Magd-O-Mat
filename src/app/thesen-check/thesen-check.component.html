@@ -26,78 +26,18 @@
 
     <ng-container *ngIf="aktuelleTheseIndex > -1">
 
-      <div class="card">
-        <div class="card-body">
-          <button
-            type="button"
-            class="card-link btn btn-link icon-link btn-sm p-0 d-md-none mb-3"
-            [disabled]="aktuelleTheseIndex <= 0"
-            (click)="zurueck()"
-          >
-            <fa-icon [icon]="faArrowLeft"></fa-icon>
-            Zurück
-          </button>
-          <button type="button" class="card-link btn btn-link btn-sm p-0 float-end" (click)="ueberspringen()">
-            These überspringen
-          </button>
-          <h6 class="card-title mb-3 text-muted">These {{ aktuelleTheseIndex + 1 }}/{{ thesen.length }}</h6>
-          <h5 class="card-text m-3 m-md-5 text-center">{{ thesen[aktuelleTheseIndex].text }}</h5>
-          <button
-            type="button"
-            class="btn btn-sm icon-link"
-            [class.btn-light]="!thesenEingaben[aktuelleTheseIndex].doppeltGewertet"
-            [class.btn-dark]="thesenEingaben[aktuelleTheseIndex].doppeltGewertet"
-            [(ngModel)]="thesenEingaben[aktuelleTheseIndex].doppeltGewertet"
-            btnCheckbox
-          >
-            <fa-icon [icon]="thesenEingaben[aktuelleTheseIndex].doppeltGewertet ? fasHeart : farHeart"></fa-icon>
-            {{ thesenEingaben[aktuelleTheseIndex].doppeltGewertet ? 'Doppelt gewertet' : 'Doppelt werten' }}
-          </button>
-        </div>
-      </div>
+      <app-these-card
+        [theseEingabe]="thesenEingaben[aktuelleTheseIndex]"
+        [theseIndex]="aktuelleTheseIndex"
+        [anzahlThesen]="thesen.length"
+        (zurueck)="zurueck()"
+        (ueberspringen)="ueberspringen()"
+      ></app-these-card>
 
-      <div class="row my-3">
-
-        <div class="col">
-          <button
-            type="button"
-            class="btn btn-lg w-100"
-            [class.btn-outline-success]="thesenEingaben[aktuelleTheseIndex].wertung !== 'ja'"
-            [class.btn-success]="thesenEingaben[aktuelleTheseIndex].wertung === 'ja'"
-            (click)="stimmeJa()"
-          >
-            <fa-icon [icon]="faSmile" size="2x"></fa-icon>
-          </button>
-          <small class="d-block text-center">Stimme zu</small>
-        </div>
-
-        <div class="col">
-          <button
-            type="button"
-            class="btn btn-lg w-100"
-            [class.btn-outline-warning]="thesenEingaben[aktuelleTheseIndex].wertung !== 'neutral'"
-            [class.btn-warning]="thesenEingaben[aktuelleTheseIndex].wertung === 'neutral'"
-            (click)="stimmeEgal()"
-          >
-            <fa-icon [icon]="faMeh" size="2x"></fa-icon>
-          </button>
-          <small class="d-block text-center">Neutral</small>
-        </div>
-
-        <div class="col">
-          <button
-            type="button"
-            class="btn btn-lg w-100"
-            [class.btn-outline-danger]="thesenEingaben[aktuelleTheseIndex].wertung !== 'nein'"
-            [class.btn-danger]="thesenEingaben[aktuelleTheseIndex].wertung === 'nein'"
-            (click)="stimmeNein()"
-          >
-            <fa-icon [icon]="faFrown" size="2x"></fa-icon>
-          </button>
-          <small class="d-block text-center">Stimme nicht zu</small>
-        </div>
-
-      </div>
+      <app-these-buttons
+        [theseEingabe]="thesenEingaben[aktuelleTheseIndex]"
+        (wertung)="handleWertung($event)"
+      ></app-these-buttons>
 
       <button type="button" class="btn btn-light btn-sm mt-3 icon-link" (click)="neustart()">
         <fa-icon [icon]="faRedo"></fa-icon>

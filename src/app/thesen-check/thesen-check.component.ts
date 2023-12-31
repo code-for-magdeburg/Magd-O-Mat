@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { These, TheseEingabe, TheseWertung } from '../model/These';
 import { Partei } from '../model/Partei';
-import { faArrowLeft, faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
-import { faFilePdf, faFrown, faHeart as farHeart, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { firstValueFrom } from 'rxjs';
 
 
@@ -25,14 +25,12 @@ type ErgebnisPartei = {
 export class ThesenCheckComponent implements OnInit {
 
 
-  faArrowLeft = faArrowLeft
-  fasHeart = fasHeart;
-  farHeart = farHeart;
-  faSmile = faSmile;
-  faMeh = faMeh;
-  faFrown = faFrown;
-  faRedo = faRedo;
-  faFilePdf = faFilePdf;
+  protected readonly fasHeart = fasHeart;
+  protected readonly faSmile = faSmile;
+  protected readonly faMeh = faMeh;
+  protected readonly faFrown = faFrown;
+  protected readonly faRedo = faRedo;
+  protected readonly faFilePdf = faFilePdf;
 
   modus = 'Eingabe';
 
@@ -64,27 +62,29 @@ export class ThesenCheckComponent implements OnInit {
   }
 
 
-  stimmeJa() {
-    if (this.aktuelleTheseIndex > -1) {
-      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'ja';
-      this.naechsteTheseOderAuswertung();
+  handleWertung(wertung: TheseWertung) {
+
+    switch (wertung) {
+      case 'ja':
+        if (this.aktuelleTheseIndex > -1) {
+          this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'ja';
+          this.naechsteTheseOderAuswertung();
+        }
+        break;
+      case 'neutral':
+        if (this.aktuelleTheseIndex > -1) {
+          this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'neutral';
+          this.naechsteTheseOderAuswertung();
+        }
+        break;
+      case 'nein':
+        if (this.aktuelleTheseIndex > -1) {
+          this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'nein';
+          this.naechsteTheseOderAuswertung();
+        }
+        break;
     }
-  }
 
-
-  stimmeEgal() {
-    if (this.aktuelleTheseIndex > -1) {
-      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'neutral';
-      this.naechsteTheseOderAuswertung();
-    }
-  }
-
-
-  stimmeNein() {
-    if (this.aktuelleTheseIndex > -1) {
-      this.thesenEingaben[this.aktuelleTheseIndex].wertung = 'nein';
-      this.naechsteTheseOderAuswertung();
-    }
   }
 
 
@@ -141,7 +141,8 @@ export class ThesenCheckComponent implements OnInit {
 
 
   private resetEingaben() {
-    this.thesenEingaben = this.thesen.map(_ => ({
+    this.thesenEingaben = this.thesen.map(these => ({
+      these,
       wertung: 'ohne',
       doppeltGewertet: false
     }));
