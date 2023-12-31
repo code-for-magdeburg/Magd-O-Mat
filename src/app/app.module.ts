@@ -19,6 +19,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { RouterModule, Routes } from '@angular/router';
 import { TheseCardComponent } from './thesen-check/these-card/these-card.component';
 import { TheseButtonsComponent } from './thesen-check/these-buttons/these-buttons.component';
+import { environment } from "../environments/environment";
 
 
 registerLocaleData(localeDe, 'de');
@@ -30,7 +31,8 @@ const routes: Routes = [
   { path: 'ueber-uns', component: UeberUnsComponent },
   { path: 'hilfe', component: HilfeComponent },
   { path: 'impressum', component: ImpressumComponent },
-  { path: 'thesen-check', component: ThesenCheckComponent },
+  { path: 'thesen-check', pathMatch: 'full', redirectTo: `thesen-check/${environment.defaultWahl}` },
+  { path: 'thesen-check/:wahlSlug', component: ThesenCheckComponent },
 ];
 
 

@@ -5,18 +5,13 @@
 
 <div class="modal-body">
 
-  <img class="img-thumbnail me-3 float-start partei-thumbnail" [src]="'assets/' + wahl + '/img/' + partei.logo">
+  <img class="img-thumbnail me-3 float-start partei-thumbnail" [src]="getParteiLogo(wahlSlug, partei)">
 
   <p>"{{ partei.beschreibung }}"</p>
 
   <span *ngIf="partei.internetadresse">
       Mehr Informationen unter:
-      <a
-        [href]="partei.internetadresse.startsWith('http://') || partei.internetadresse.startsWith('https://') ? partei.internetadresse : 'http://' + partei.internetadresse"
-        target="_blank"
-      >
-        {{ partei.internetadresse }}
-      </a>
+      <a [href]="getParteiHref(partei)" target="_blank">{{ partei.internetadresse }}</a>
     </span>
 
   <div class="list-group list-group-flush mt-3">

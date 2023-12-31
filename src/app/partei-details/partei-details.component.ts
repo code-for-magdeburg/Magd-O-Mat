@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { environment } from 'src/environments/environment';
 import { Partei } from '../model/Partei';
 import { faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
 import { TheseEingabe } from '../model/These';
+import { getParteiHref, getParteiLogo } from '../helpers';
 
 
 @Component({
@@ -24,8 +24,11 @@ export class ParteiDetailsComponent {
   protected readonly faFrown = faFrown;
   protected readonly faHeart = faHeart;
 
+  protected readonly getParteiLogo = getParteiLogo;
+  protected readonly getParteiHref = getParteiHref;
+
   partei!: Partei;
-  wahl = environment.wahl;
+  wahlSlug!: string;
   theseEingaben: TheseEingabe[] = [];
 
 
