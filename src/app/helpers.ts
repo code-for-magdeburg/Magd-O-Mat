@@ -2,12 +2,12 @@ import { Partei } from './model/Partei';
 
 
 export function getParteiLogo(wahlSlug: string, partei: Partei): string {
-  return `assets/${wahlSlug}/img/${partei.logo}`;
+  return `/assets/thesen-checks/${wahlSlug}/img/${partei.logo}`;
 }
 
 
 export function getPositionenDokument(wahlSlug: string): string {
-  return `/assets/${wahlSlug}/Alle_Positionen.pdf`;
+  return `/assets/thesen-checks/${wahlSlug}/Alle_Positionen.pdf`;
 }
 
 

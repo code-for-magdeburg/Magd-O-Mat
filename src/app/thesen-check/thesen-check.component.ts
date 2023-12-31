@@ -147,12 +147,12 @@ export class ThesenCheckComponent implements OnInit {
 
 
   private async ladeThesen(wahlSlug: string) {
-    this.thesen = await firstValueFrom(this.http.get<These[]>(`assets/${wahlSlug}/thesen.json`));
+    this.thesen = await firstValueFrom(this.http.get<These[]>(`/assets/thesen-checks/${wahlSlug}/thesen.json`));
   }
 
 
   private async ladeParteien(wahlSlug: string) {
-    this.parteien = await firstValueFrom(this.http.get<Partei[]>(`assets/${wahlSlug}/parteien.json`));
+    this.parteien = await firstValueFrom(this.http.get<Partei[]>(`/assets/thesen-checks/${wahlSlug}/parteien.json`));
   }
 
 
