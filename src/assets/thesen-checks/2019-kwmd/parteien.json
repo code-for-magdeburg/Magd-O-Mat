@@ -1,6 +1,5 @@
 [
     {
-        "id": 0,
         "nameKurz": "CDU",
         "nameLang": "Christlich Demokratische Union",
         "logo": "CDU.png",
@@ -45,7 +44,6 @@
         ]
     },
     {
-        "id": 1,
         "nameKurz": "DIE LINKE",
         "nameLang": "DIE LINKE",
         "logo": "DieLinke.png",
@@ -90,7 +88,6 @@
         ]
     },
     {
-        "id": 2,
         "nameKurz": "SPD",
         "nameLang": "Sozialdemokratische Partei Deutschlands",
         "logo": "SPD.png",
@@ -135,7 +132,6 @@
         ]
     },
     {
-        "id": 3,
         "nameKurz": "GRÜNE",
         "nameLang": "BÜNDNIS 90/DIE GRÜNEN",
         "logo": "DieGruenen.png",
@@ -180,7 +176,6 @@
         ]
     },
     {
-        "id": 4,
         "nameKurz": "Tierschutzallianz",
         "nameLang": "Allianz für Menschenrechte, Tier- und Naturschutz",
         "logo": "Tierschutzallianz.png",
@@ -225,7 +220,6 @@
         ]
     },
     {
-        "id": 5,
         "nameKurz": "FDP",
         "nameLang": "Freie Demokratische Partei",
         "logo": "FDP.png",
@@ -270,7 +264,6 @@
         ]
     },
     {
-        "id": 6,
         "nameKurz": "Tierschutzpartei",
         "nameLang": "Partei Mensch Umwelt Tierschutz",
         "logo": "Tierschutzpartei.png",
@@ -315,7 +308,6 @@
         ]
     },
     {
-        "id": 7,
         "nameKurz": "AfD",
         "nameLang": "Alternative für Deutschland",
         "logo": "AfD.png",
@@ -360,7 +352,6 @@
         ]
     },
     {
-        "id": 8,
         "nameKurz": "future!",
         "nameLang": "future! Magdeburg",
         "logo": "future.png",
@@ -405,7 +396,6 @@
         ]
     },
     {
-        "id": 9,
         "nameKurz": "BFM",
         "nameLang": "Bund für Magdeburg e.V. Freie Wählergemeinschaft",
         "logo": "BfM.png",
@@ -450,7 +440,6 @@
         ]
     },
     {
-        "id": 10,
         "nameKurz": "Die PARTEI",
         "nameLang": "Partei für Arbeit, Rechtsstaat, Tierschutz, Elitenförderung und basisdemokratische Initiative",
         "logo": "DiePartei.png",

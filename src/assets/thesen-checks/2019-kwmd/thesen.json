@@ -1,176 +1,141 @@
 [
     {
-        "id": 0,
         "kategorie": "Stadtentwicklung",
         "text": "Magdeburg sollte mehr Geld in den Hochwasserschutz investieren."
     },
     {
-        "id": 1,
         "kategorie": "Zusammenleben",
         "text": "Es sollte mehr Videoüberwachung im öffentlichen Raum eingesetzt werden."
     },
     {
-        "id": 2,
         "kategorie": "Verkehr und Mobilität",
         "text": "In Magdeburgs Wohnvierteln sollten mehr Parkplätze geschaffen werden."
     },
     {
-        "id": 3,
         "kategorie": "Zusammenleben",
         "text": "Für die Genehmigung von Feuerwerken sollten strengere Auflagen gelten."
     },
     {
-        "id": 4,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Die Stadt sollte den Bau eines Großaquariums des Zoos unterstützen."
     },
     {
-        "id": 5,
         "kategorie": "Zusammenleben",
         "text": "Umsonstläden sollten durch die Stadt finanziell unterstützt werden."
     },
     {
-        "id": 6,
         "kategorie": "Stadtentwicklung",
         "text": "Am Stadtpark sollte ein neues Wohnviertel entstehen."
     },
     {
-        "id": 7,
         "kategorie": "Zusammenleben",
         "text": "Der Bau einer Synagoge sollte unterstützt und finanziell gefördert werden."
     },
     {
-        "id": 8,
         "kategorie": "Stadtentwicklung",
         "text": "Es sollte eine weitere Elbbrücke für den Autoverkehr gebaut werden."
     },
     {
-        "id": 9,
         "kategorie": "Zusammenleben",
         "text": "Magdeburg sollte freiwillig über ihr Kontingent hinaus Geflüchtete aufnehmen."
     },
     {
-        "id": 10,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Die Stadt sollte die Bewerbung zur Kulturhauptstadt 2025 mit hoher Priorität verfolgen."
     },
     {
-        "id": 11,
         "kategorie": "Zusammenleben",
         "text": "Es sollten mehr Begegnungsorte für Familien und Menschen verschiedener Generationen finanziert werden."
     },
     {
-        "id": 12,
         "kategorie": "Verkehr und Mobilität",
         "text": "Alle Straßenbahnhaltestellen sollten barrierefrei sein."
     },
     {
-        "id": 13,
         "kategorie": "Wirtschaft und Energie",
         "text": "Städtische Einrichtungen und die Magdeburger Verkehrsbetriebe sollten ihren Strombedarf komplett aus Ökostrom decken."
     },
     {
-        "id": 14,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Kita-Plätze sollten für alle kostenfrei sein."
     },
     {
-        "id": 15,
         "kategorie": "Natur und Umwelt",
         "text": "Es sollte viel mehr für den Erhalt städtischer Bäume getan werden."
     },
     {
-        "id": 16,
         "kategorie": "Wirtschaft und Energie",
         "text": "Die Stadt sollte privaten Investoren den Zugang zum Immobilienmarkt erleichtern."
     },
     {
-        "id": 17,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Die Stadt sollte weiterhin in den Profisport investieren, wie im Fall des Umbaus der MDCC-Arena."
     },
     {
-        "id": 18,
         "kategorie": "Zusammenleben",
         "text": "Kinder- und Jugendeinrichtungen sollten stärker finanziell gefördert werden."
     },
     {
-        "id": 19,
         "kategorie": "Natur und Umwelt",
         "text": "Die Ausgabe von Einwegbechern und Einweggeschirr sollte in Magdeburg eingeschränkt werden."
     },
     {
-        "id": 20,
         "kategorie": "Politik und Verwaltung",
         "text": "Eltern sollten die Schule ihrer Kinder frei wählen können."
     },
     {
-        "id": 21,
         "kategorie": "Politik und Verwaltung",
         "text": "Es sollte kostenfreier Nahverkehr für Schülerinnen und Schüler, Studierende und Azubis eingeführt werden."
     },
     {
-        "id": 22,
         "kategorie": "Wirtschaft und Energie",
         "text": "Die Stadt sollte die Ansiedlung großer Unternehmen zur Schaffung neuer Arbeitsplätze subventionieren."
     },
     {
-        "id": 23,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Leerstehende Ladenflächen sollten zur nicht-kommerziellen Nutzung temporär zur Verfügung gestellt werden."
     },
     {
-        "id": 24,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Gemeinnützige Vereine sollten auch abseits konkreter Projekte gefördert werden können."
     },
     {
-        "id": 25,
         "kategorie": "Politik und Verwaltung",
         "text": "Die Stadtverwaltung sollte geschlechtergerechte Sprache in Formularen und Veröffentlichungen verwenden."
     },
     {
-        "id": 26,
         "kategorie": "Verkehr und Mobilität",
         "text": "Falschparker auf Geh- und Radwegen sowie auf Grünflächen sollten konsequent abgeschleppt werden."
     },
     {
-        "id": 27,
         "kategorie": "Politik und Verwaltung",
         "text": "Der Außerhausverkauf von Alkohol sollte am Hasselbachplatz nach Mitternacht verboten sein."
     },
     {
-        "id": 28,
         "kategorie": "Stadtentwicklung",
         "text": "Die Stadt sollte sich für einen flächendeckenden Internetausbau mit Glasfaser einsetzen."
     },
     {
-        "id": 29,
         "kategorie": "Bildung, Kultur und Sport",
         "text": "Das jährliche Open-Air Musical sollte weiterhin auf dem Domplatz stattfinden."
     },
     {
-        "id": 30,
         "kategorie": "Zusammenleben",
         "text": "Asylbewerber und Geduldete sollten nur Sachleistungen statt Geld bekommen."
     },
     {
-        "id": 31,
         "kategorie": "Politik und Verwaltung",
         "text": "Kinder und Jugendliche sollten bei allen Entscheidungen, die sie betreffen, einbezogen werden."
     },
     {
-        "id": 32,
         "kategorie": "Natur und Umwelt",
         "text": "Der Stadtpark sollte eine autofreie Zone werden."
     },
     {
-        "id": 33,
         "kategorie": "Verkehr und Mobilität",
         "text": "Die Radwege und Fahrradabstellplätze sollten ausgebaut werden. Dafür können auch Autospuren und Parkplätze umgebaut werden."
     },
     {
-        "id": 34,
         "kategorie": "Stadtentwicklung",
         "text": "Kleingärten sollten Bauprojekten nicht weichen müssen."
     }

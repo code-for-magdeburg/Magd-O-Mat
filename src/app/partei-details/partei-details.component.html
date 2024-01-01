@@ -7,31 +7,58 @@
 
   <img class="img-thumbnail me-3 float-start partei-thumbnail" [src]="getParteiLogo(wahlSlug, partei)">
 
-  <p>"{{ partei.beschreibung }}"</p>
+  <blockquote class="blockquote">
+    <p>"{{ partei.beschreibung }}"</p>
+  </blockquote>
 
   <span *ngIf="partei.internetadresse">
-      Mehr Informationen unter:
-      <a [href]="getParteiHref(partei)" target="_blank">{{ partei.internetadresse }}</a>
-    </span>
+    Mehr Informationen unter:
+    <a [href]="getParteiHref(partei)" target="_blank">{{ partei.internetadresse }}</a>
+  </span>
 
   <div class="list-group list-group-flush mt-3">
     <div *ngFor="let theseEingabe of theseEingaben; let index = index" class="list-group-item px-0">
-      <strong>These {{ index + 1 }}/{{ theseEingaben.length }}</strong><br>
-      <p>{{ theseEingabe.these.text }}</p>
-      <span class="text-muted small">{{ partei.nameKurz }}:</span>
-      <fa-icon *ngIf="partei.thesen[index] === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
-      <fa-icon *ngIf="partei.thesen[index] === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
-      <fa-icon *ngIf="partei.thesen[index] === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
-      <span class="text-muted small ms-3">Deine Wertung: {{ theseEingabe.wertung }}</span>
-      <fa-icon *ngIf="theseEingabe.wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
-      <fa-icon *ngIf="theseEingabe.wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
-      <fa-icon *ngIf="theseEingabe.wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
-      <span *ngIf="theseEingabe.wertung === 'ohne'" class="text-muted ms-2">-</span>
-      <fa-icon
-        *ngIf="theseEingabe.doppeltGewertet && theseEingabe.wertung !== 'ohne'"
-        class="text-muted ms-2"
-        [icon]="faHeart"
-      ></fa-icon>
+
+      <div>
+        <strong>These {{ index + 1 }}</strong>
+        <p class="mx-0 my-1">{{ theseEingabe.these.text }}</p>
+      </div>
+
+      <div>
+        <span class="text-muted small">{{ partei.nameKurz }}:</span>
+        <fa-icon *ngIf="partei.thesen[index].wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
+        <fa-icon *ngIf="partei.thesen[index].wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
+        <fa-icon *ngIf="partei.thesen[index].wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
+        <span class="text-muted small ms-3">Deine Wertung:</span>
+        <fa-icon *ngIf="theseEingabe.wertung === 'ja'" class="text-success ms-2" [icon]="faSmile"></fa-icon>
+        <fa-icon *ngIf="theseEingabe.wertung === 'neutral'" class="text-warning ms-2" [icon]="faMeh"></fa-icon>
+        <fa-icon *ngIf="theseEingabe.wertung === 'nein'" class="text-danger ms-2" [icon]="faFrown"></fa-icon>
+        <span *ngIf="theseEingabe.wertung === 'ohne'" class="text-muted ms-2">-</span>
+        <fa-icon
+          *ngIf="theseEingabe.doppeltGewertet && theseEingabe.wertung !== 'ohne'"
+          class="text-muted ms-2"
+          [icon]="faHeart"
+        ></fa-icon>
+      </div>
+
+      <div>
+        <button
+          *ngIf="partei.thesen[index].begruendung; else keineBegruendung"
+          class="btn btn-sm btn-link px-0"
+          (click)="isCollapsed[index] = !isCollapsed[index]"
+        >
+          {{ isCollapsed[index] ? 'Begründung einblenden' : 'Begründung ausblenden' }}
+        </button>
+        <div [collapse]="isCollapsed[index]" [isAnimated]="true">
+          <blockquote class="blockquote">
+            <p>"{{ partei.thesen[index].begruendung }}"</p>
+          </blockquote>
+        </div>
+        <ng-template #keineBegruendung>
+          <span class="text-muted small py-1">Keine Begründung vorhanden</span>
+        </ng-template>
+      </div>
+
     </div>
   </div>
 
