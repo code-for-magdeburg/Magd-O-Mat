@@ -104,14 +104,20 @@
       <div
         *ngFor="let theseEingabe of thesenEingaben; let index = index;"
         class="list-group-item list-group-item-action d-flex"
-        (click)="zeigeThese(thesen[index], theseEingabe)"
+        (click)="zeigeThese(index)"
       >
 
         <div class="flex-fill">
-          <strong>These {{ index + 1 }}/{{ thesen.length }}
-            <fa-icon *ngIf="theseEingabe.doppeltGewertet && theseEingabe.wertung !== 'ohne'" [icon]="fasHeart"></fa-icon>
-          </strong><br>
-          {{ thesen[index].text }}
+          <strong>
+            These {{ index + 1 }}
+            <fa-icon
+              *ngIf="theseEingabe.doppeltGewertet && theseEingabe.wertung !== 'ohne'"
+              [icon]="fasHeart"
+            ></fa-icon>
+          </strong>
+          <p class="my-0">
+            {{ thesen[index].text }}
+          </p>
         </div>
 
         <fa-icon
@@ -136,15 +142,16 @@
       </div>
     </div>
 
-    <div class="text-muted my-5">
-      <p>
-        Eine Übersicht mit den Antworten aller Parteien auf die MAGD-O-MAT-Thesen findest du hier als
-        <a [href]="getPositionenDokument(wahlSlug)">
-          PDF
-          <fa-icon [icon]="faFilePdf"></fa-icon>
-        </a>.
-      </p>
-    </div>
+    <!-- See issue https://github.com/code-for-magdeburg/Magd-O-Mat/issues/72 -->
+    <!--    <div class="text-muted my-5">-->
+    <!--      <p>-->
+    <!--        Eine Übersicht mit den Antworten aller Parteien auf die MAGD-O-MAT-Thesen findest du hier als-->
+    <!--        <a [href]="getPositionenDokument(wahlSlug)">-->
+    <!--          PDF-->
+    <!--          <fa-icon [icon]="faFilePdf"></fa-icon>-->
+    <!--        </a>.-->
+    <!--      </p>-->
+    <!--    </div>-->
 
     <button type="button" class="btn btn-outline-primary icon-link" (click)="neustart()">
       <fa-icon [icon]="faRedo"></fa-icon>

@@ -133,13 +133,13 @@ export class ThesenCheckComponent implements OnInit {
   }
 
 
-  zeigeThese(these: These, theseEingabe: TheseEingabe) {
+  zeigeThese(theseIndex: number) {
     this.modalRef = this.modalService.show(TheseDetailsComponent, {
       initialState: {
-        these,
-        theseEingabe,
+        these: this.thesen[theseIndex],
+        theseIndex,
+        theseEingabe: this.thesenEingaben[theseIndex],
         wahlSlug: this.wahlSlug,
-        anzahlThesen: this.thesen.length,
         parteien: this.parteien
       }
     });
@@ -197,7 +197,7 @@ export class ThesenCheckComponent implements OnInit {
   private bestimmeMaxPunkte(theseEingabe: TheseEingabe, theseIndex: number): number {
 
     const punkteProPartei = this.parteien.map(partei => {
-      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[theseIndex]);
+      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[theseIndex].wertung);
       return theseEingabe.doppeltGewertet ? 2 * punkte : punkte;
     });
 
@@ -215,7 +215,7 @@ export class ThesenCheckComponent implements OnInit {
     let summe = 0;
 
     this.thesenEingaben.forEach((theseEingabe, index) => {
-      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[index]);
+      const punkte = this.berechnePunkteProWertung(theseEingabe.wertung, partei.thesen[index].wertung);
       summe += theseEingabe.doppeltGewertet ? 2 * punkte : punkte;
     });
 
