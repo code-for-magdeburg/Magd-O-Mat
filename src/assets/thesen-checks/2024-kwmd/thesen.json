@@ -1,10 +1,18 @@
 [
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Magdeburg sollte mehr Geld in den Hochwasserschutz investieren."
-    },
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Kleingärten sollten Bauprojekten nicht weichen müssen."
-    }
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Magdeburg sollte mehr Geld in den Hochwasserschutz investieren.",
+    "infos": [
+      {
+        "titel": "Digitales Rathaus - Hochwasserschutz",
+        "quelle": "magdeburg.de",
+        "link": "https://www.magdeburg.de/?object=tx%7c698.8844&ModID=10&FID=37.765.1"
+      }
+    ]
+  },
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Kleingärten sollten Bauprojekten nicht weichen müssen.",
+    "infos": []
+  }
 ]

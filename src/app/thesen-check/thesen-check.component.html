@@ -2,13 +2,6 @@
 
   <div *ngIf="modus === 'Eingabe'">
 
-    <div class="text-md-center text-muted mb-3">
-      <p>
-        Der MAGD-O-MAT ist keine Wahlempfehlung, sondern ein Informationsangebot. Erfahre mehr auf der
-        <a [routerLink]="'/hilfe'">Hilfeseite</a>.
-      </p>
-    </div>
-
     <div class="my-3 d-none d-md-block">
       <div class="btn-group" role="group">
         <button
@@ -38,6 +31,28 @@
         [theseEingabe]="thesenEingaben[aktuelleTheseIndex]"
         (wertung)="handleWertung($event)"
       ></app-these-buttons>
+
+      <ng-container *ngIf="thesen[aktuelleTheseIndex].infos.length > 0">
+
+        <div class="card mt-4 small">
+          <div class="card-header">
+            Hintergrund-Informationen
+          </div>
+          <div class="card-body">
+            <div
+              *ngFor="let info of thesen[aktuelleTheseIndex].infos; let index = index;"
+              class="d-flex flex-column"
+              [class.mb-3]="index < thesen[aktuelleTheseIndex].infos.length - 1"
+            >
+              <span class="text-muted">{{ info.quelle }}:</span>
+              <a [href]="info.link" class="icon-link" target="_blank">
+                {{ info.titel }}
+                <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </ng-container>
 
       <button type="button" class="btn btn-light btn-sm mt-3 icon-link" (click)="neustart()">
         <fa-icon [icon]="faRedo"></fa-icon>
