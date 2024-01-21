@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { These, TheseEingabe, TheseWertung } from '../model/These';
 import { Partei } from '../model/Partei';
-import { faHeart as fasHeart, faRedo } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as fasHeart, faRedo, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faFilePdf, faFrown, faMeh, faSmile } from '@fortawesome/free-regular-svg-icons';
 import { firstValueFrom, map } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
@@ -33,6 +33,7 @@ export class ThesenCheckComponent implements OnInit {
   protected readonly faFrown = faFrown;
   protected readonly faRedo = faRedo;
   protected readonly faFilePdf = faFilePdf;
+  protected readonly faArrowUpRightFromSquare = faArrowUpRightFromSquare;
 
   protected readonly getParteiLogo = getParteiLogo;
   protected readonly getPositionenDokument = getPositionenDokument;

@@ -1,142 +1,177 @@
 [
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Magdeburg sollte mehr Geld in den Hochwasserschutz investieren."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Es sollte mehr Videoüberwachung im öffentlichen Raum eingesetzt werden."
-    },
-    {
-        "kategorie": "Verkehr und Mobilität",
-        "text": "In Magdeburgs Wohnvierteln sollten mehr Parkplätze geschaffen werden."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Für die Genehmigung von Feuerwerken sollten strengere Auflagen gelten."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Die Stadt sollte den Bau eines Großaquariums des Zoos unterstützen."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Umsonstläden sollten durch die Stadt finanziell unterstützt werden."
-    },
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Am Stadtpark sollte ein neues Wohnviertel entstehen."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Der Bau einer Synagoge sollte unterstützt und finanziell gefördert werden."
-    },
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Es sollte eine weitere Elbbrücke für den Autoverkehr gebaut werden."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Magdeburg sollte freiwillig über ihr Kontingent hinaus Geflüchtete aufnehmen."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Die Stadt sollte die Bewerbung zur Kulturhauptstadt 2025 mit hoher Priorität verfolgen."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Es sollten mehr Begegnungsorte für Familien und Menschen verschiedener Generationen finanziert werden."
-    },
-    {
-        "kategorie": "Verkehr und Mobilität",
-        "text": "Alle Straßenbahnhaltestellen sollten barrierefrei sein."
-    },
-    {
-        "kategorie": "Wirtschaft und Energie",
-        "text": "Städtische Einrichtungen und die Magdeburger Verkehrsbetriebe sollten ihren Strombedarf komplett aus Ökostrom decken."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Kita-Plätze sollten für alle kostenfrei sein."
-    },
-    {
-        "kategorie": "Natur und Umwelt",
-        "text": "Es sollte viel mehr für den Erhalt städtischer Bäume getan werden."
-    },
-    {
-        "kategorie": "Wirtschaft und Energie",
-        "text": "Die Stadt sollte privaten Investoren den Zugang zum Immobilienmarkt erleichtern."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Die Stadt sollte weiterhin in den Profisport investieren, wie im Fall des Umbaus der MDCC-Arena."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Kinder- und Jugendeinrichtungen sollten stärker finanziell gefördert werden."
-    },
-    {
-        "kategorie": "Natur und Umwelt",
-        "text": "Die Ausgabe von Einwegbechern und Einweggeschirr sollte in Magdeburg eingeschränkt werden."
-    },
-    {
-        "kategorie": "Politik und Verwaltung",
-        "text": "Eltern sollten die Schule ihrer Kinder frei wählen können."
-    },
-    {
-        "kategorie": "Politik und Verwaltung",
-        "text": "Es sollte kostenfreier Nahverkehr für Schülerinnen und Schüler, Studierende und Azubis eingeführt werden."
-    },
-    {
-        "kategorie": "Wirtschaft und Energie",
-        "text": "Die Stadt sollte die Ansiedlung großer Unternehmen zur Schaffung neuer Arbeitsplätze subventionieren."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Leerstehende Ladenflächen sollten zur nicht-kommerziellen Nutzung temporär zur Verfügung gestellt werden."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Gemeinnützige Vereine sollten auch abseits konkreter Projekte gefördert werden können."
-    },
-    {
-        "kategorie": "Politik und Verwaltung",
-        "text": "Die Stadtverwaltung sollte geschlechtergerechte Sprache in Formularen und Veröffentlichungen verwenden."
-    },
-    {
-        "kategorie": "Verkehr und Mobilität",
-        "text": "Falschparker auf Geh- und Radwegen sowie auf Grünflächen sollten konsequent abgeschleppt werden."
-    },
-    {
-        "kategorie": "Politik und Verwaltung",
-        "text": "Der Außerhausverkauf von Alkohol sollte am Hasselbachplatz nach Mitternacht verboten sein."
-    },
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Die Stadt sollte sich für einen flächendeckenden Internetausbau mit Glasfaser einsetzen."
-    },
-    {
-        "kategorie": "Bildung, Kultur und Sport",
-        "text": "Das jährliche Open-Air Musical sollte weiterhin auf dem Domplatz stattfinden."
-    },
-    {
-        "kategorie": "Zusammenleben",
-        "text": "Asylbewerber und Geduldete sollten nur Sachleistungen statt Geld bekommen."
-    },
-    {
-        "kategorie": "Politik und Verwaltung",
-        "text": "Kinder und Jugendliche sollten bei allen Entscheidungen, die sie betreffen, einbezogen werden."
-    },
-    {
-        "kategorie": "Natur und Umwelt",
-        "text": "Der Stadtpark sollte eine autofreie Zone werden."
-    },
-    {
-        "kategorie": "Verkehr und Mobilität",
-        "text": "Die Radwege und Fahrradabstellplätze sollten ausgebaut werden. Dafür können auch Autospuren und Parkplätze umgebaut werden."
-    },
-    {
-        "kategorie": "Stadtentwicklung",
-        "text": "Kleingärten sollten Bauprojekten nicht weichen müssen."
-    }
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Magdeburg sollte mehr Geld in den Hochwasserschutz investieren.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Es sollte mehr Videoüberwachung im öffentlichen Raum eingesetzt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Verkehr und Mobilität",
+    "text": "In Magdeburgs Wohnvierteln sollten mehr Parkplätze geschaffen werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Für die Genehmigung von Feuerwerken sollten strengere Auflagen gelten.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Die Stadt sollte den Bau eines Großaquariums des Zoos unterstützen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Umsonstläden sollten durch die Stadt finanziell unterstützt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Am Stadtpark sollte ein neues Wohnviertel entstehen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Der Bau einer Synagoge sollte unterstützt und finanziell gefördert werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Es sollte eine weitere Elbbrücke für den Autoverkehr gebaut werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Magdeburg sollte freiwillig über ihr Kontingent hinaus Geflüchtete aufnehmen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Die Stadt sollte die Bewerbung zur Kulturhauptstadt 2025 mit hoher Priorität verfolgen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Es sollten mehr Begegnungsorte für Familien und Menschen verschiedener Generationen finanziert werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Verkehr und Mobilität",
+    "text": "Alle Straßenbahnhaltestellen sollten barrierefrei sein.",
+    "infos": []
+  },
+  {
+    "kategorie": "Wirtschaft und Energie",
+    "text": "Städtische Einrichtungen und die Magdeburger Verkehrsbetriebe sollten ihren Strombedarf komplett aus Ökostrom decken.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Kita-Plätze sollten für alle kostenfrei sein.",
+    "infos": []
+  },
+  {
+    "kategorie": "Natur und Umwelt",
+    "text": "Es sollte viel mehr für den Erhalt städtischer Bäume getan werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Wirtschaft und Energie",
+    "text": "Die Stadt sollte privaten Investoren den Zugang zum Immobilienmarkt erleichtern.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Die Stadt sollte weiterhin in den Profisport investieren, wie im Fall des Umbaus der MDCC-Arena.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Kinder- und Jugendeinrichtungen sollten stärker finanziell gefördert werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Natur und Umwelt",
+    "text": "Die Ausgabe von Einwegbechern und Einweggeschirr sollte in Magdeburg eingeschränkt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Politik und Verwaltung",
+    "text": "Eltern sollten die Schule ihrer Kinder frei wählen können.",
+    "infos": []
+  },
+  {
+    "kategorie": "Politik und Verwaltung",
+    "text": "Es sollte kostenfreier Nahverkehr für Schülerinnen und Schüler, Studierende und Azubis eingeführt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Wirtschaft und Energie",
+    "text": "Die Stadt sollte die Ansiedlung großer Unternehmen zur Schaffung neuer Arbeitsplätze subventionieren.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Leerstehende Ladenflächen sollten zur nicht-kommerziellen Nutzung temporär zur Verfügung gestellt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Gemeinnützige Vereine sollten auch abseits konkreter Projekte gefördert werden können.",
+    "infos": []
+  },
+  {
+    "kategorie": "Politik und Verwaltung",
+    "text": "Die Stadtverwaltung sollte geschlechtergerechte Sprache in Formularen und Veröffentlichungen verwenden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Verkehr und Mobilität",
+    "text": "Falschparker auf Geh- und Radwegen sowie auf Grünflächen sollten konsequent abgeschleppt werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Politik und Verwaltung",
+    "text": "Der Außerhausverkauf von Alkohol sollte am Hasselbachplatz nach Mitternacht verboten sein.",
+    "infos": []
+  },
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Die Stadt sollte sich für einen flächendeckenden Internetausbau mit Glasfaser einsetzen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Bildung, Kultur und Sport",
+    "text": "Das jährliche Open-Air Musical sollte weiterhin auf dem Domplatz stattfinden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Zusammenleben",
+    "text": "Asylbewerber und Geduldete sollten nur Sachleistungen statt Geld bekommen.",
+    "infos": []
+  },
+  {
+    "kategorie": "Politik und Verwaltung",
+    "text": "Kinder und Jugendliche sollten bei allen Entscheidungen, die sie betreffen, einbezogen werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Natur und Umwelt",
+    "text": "Der Stadtpark sollte eine autofreie Zone werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Verkehr und Mobilität",
+    "text": "Die Radwege und Fahrradabstellplätze sollten ausgebaut werden. Dafür können auch Autospuren und Parkplätze umgebaut werden.",
+    "infos": []
+  },
+  {
+    "kategorie": "Stadtentwicklung",
+    "text": "Kleingärten sollten Bauprojekten nicht weichen müssen.",
+    "infos": []
+  }
 ]
