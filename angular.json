@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "MAGD-O-MAT:build:production"
+              "buildTarget": "MAGD-O-MAT:build:production"
             },
             "development": {
-              "browserTarget": "MAGD-O-MAT:build:development"
+              "buildTarget": "MAGD-O-MAT:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "MAGD-O-MAT:build"
+            "buildTarget": "MAGD-O-MAT:build"
           }
         },
         "test": {
